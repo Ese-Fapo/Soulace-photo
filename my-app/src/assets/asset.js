@@ -2,9 +2,28 @@ import bride from './image/bride.jpg'
 import coupleKiss from './image/couple-kiss.jpg'
 import coupleWithTrains from './image/couple-with-trains.webp'
 import couple from './image/couple.jpeg'
+import event01 from './image/event-01.webp'
+import event2 from './image/event-2.jpg'
+import event3 from './image/event-3.jpg'
+import event4 from './image/event-4.avif'
 import family4 from './image/family-4.jpeg'
+import fashion2 from './image/fashion-2.jpg'
+import fashion from './image/fashion.jpg'
+import kidPotraite from './image/kid-potraite.jpg'
 import littleBrideGroom from './image/little-bride&groom.jpeg'
 import littleGirl from './image/littlegirl.jpeg'
+import portraitMale from './image/portrait-male.avif'
+import potrait001 from './image/potrait-001.jpg'
+import potrait002 from './image/potrait-002.jpg'
+import potraitMale from './image/potrait-male.avif'
+import productPhoto2 from './image/product-photo-2.avif'
+import productPhoto from './image/product-photo.jpg'
+import product from './image/product.jpeg'
+import realEstate1 from './image/real-estate-1.jpeg'
+import realEstate2 from './image/real-estate2.jpeg'
+import realEstate from './image/real-estate.jpeg'
+import realestate2 from './image/realestate-2.avif'
+import realestate from './image/realestate.jpg'
 import receptionFood from './image/reception-food.jpeg'
 import reception from './image/reception.jpeg'
 import receptionJpg from './image/reception.jpg'
@@ -15,9 +34,28 @@ const images = {
   coupleKiss,
   coupleWithTrains,
   couple,
+  event01,
+  event2,
+  event3,
+  event4,
   family4,
+  fashion,
+  fashion2,
+  kidPotraite,
   littleBrideGroom,
   littleGirl,
+  portraitMale,
+  potrait001,
+  potrait002,
+  potraitMale,
+  product,
+  productPhoto,
+  productPhoto2,
+  realEstate,
+  realEstate1,
+  realEstate2,
+  realestate,
+  realestate2,
   receptionFood,
   reception,
   receptionJpg,
@@ -35,7 +73,7 @@ import {
 } from 'react-icons/fa'
 
 export const assets = {
-    bgImg: images.coupleWithTrains,
+    bgImg: images.event3,
     aboutImg: images.bride,
 }
 

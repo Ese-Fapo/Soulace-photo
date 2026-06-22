@@ -1,5 +1,5 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FaBars, FaCamera, FaTimes } from 'react-icons/fa'
 import { navLinks } from '../assets/asset'
 
@@ -9,9 +9,31 @@ const Navbar = () => {
 
   const closeMenu = () => setIsOpen(false)
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1280) {
+        closeMenu()
+      }
+    }
+
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        closeMenu()
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+    window.addEventListener('keydown', handleEscape)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('keydown', handleEscape)
+    }
+  }, [])
+
   return (
-    <nav className='fixed top-0 left-0 z-50 w-full bg-white/90 shadow-sm backdrop-blur-sm'>
-      <div className='container mx-auto px-4 py-3 sm:px-6 lg:py-4'>
+    <nav className='fixed left-0 right-0 top-0 z-50 w-full bg-white/95 shadow-sm backdrop-blur-sm'>
+      <div className='mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:py-4'>
         <div className='flex min-w-0 items-center justify-between gap-3'>
           {/* Logo */}
           <a
@@ -20,10 +42,12 @@ const Navbar = () => {
             className='flex min-w-0 flex-1 items-center gap-2 font-playerfair font-bold text-gradient-gold xl:flex-none'
             aria-label='Solace-Foto home'
           >
-            <span className='flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-full bg-gradient-gold text-base transition-colors duration-300 hover:bg-gradient-gold-hover'>
+            <span className='flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full bg-gradient-gold text-sm transition-colors duration-300 hover:bg-gradient-gold-hover sm:h-10 sm:w-10 sm:text-base'>
               <FaCamera />
             </span>
-            <span className='truncate text-xl text-gradient-gold sm:text-3xl'>Solace-Foto</span>
+            <span className='truncate text-lg text-gradient-gold min-[360px]:text-xl sm:text-3xl'>
+              Solace-Foto
+            </span>
           </a>
 
           {/* Desktop Navigation */}
@@ -48,7 +72,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             type='button'
-            className='flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-charcoal transition-colors duration-300 hover:bg-cream xl:hidden'
+            className='flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-transparent text-charcoal transition-colors duration-300 hover:border-chamegane hover:bg-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold xl:hidden'
             onClick={() => setIsOpen((open) => !open)}
             aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={isOpen}
@@ -63,15 +87,15 @@ const Navbar = () => {
       {isOpen && (
         <div
           id='mobile-navigation'
-          className='max-h-[calc(100vh-4.25rem)] overflow-y-auto border-t border-chamegane bg-white px-4 py-4 shadow-sm xl:hidden'
+          className='absolute left-0 right-0 top-full max-h-[calc(100vh-4.25rem)] overflow-y-auto border-t border-chamegane bg-white px-4 py-4 shadow-lg xl:hidden'
         >
-          <div className='container mx-auto grid gap-2 sm:grid-cols-2 md:grid-cols-3'>
+          <div className='mx-auto grid max-w-7xl grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3'>
             {navLinks.map((link) => (
               <a
                 key={link.id}
                 href={link.href}
                 onClick={closeMenu}
-                className='rounded-md px-4 py-3 text-center font-montserrat text-sm font-semibold uppercase tracking-wide text-charcoal transition-colors duration-300 hover:bg-cream hover:text-rose'
+                className='rounded-md px-4 py-3 text-center font-montserrat text-sm font-semibold uppercase tracking-wide text-charcoal transition-colors duration-300 hover:bg-cream hover:text-rose focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold'
               >
                 {link.id}
               </a>
@@ -79,7 +103,7 @@ const Navbar = () => {
             <a
               href={bookingHref}
               onClick={closeMenu}
-              className='rounded-md bg-gradient-gold px-4 py-3 text-center font-montserrat text-sm font-bold uppercase tracking-wide text-charcoal shadow-md shadow-gold/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gold/40 sm:col-span-2 md:col-span-3'
+              className='rounded-md bg-gradient-gold px-4 py-3 text-center font-montserrat text-sm font-bold uppercase tracking-wide text-charcoal shadow-md shadow-gold/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gold/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal sm:col-span-2 md:col-span-3'
             >
               Book a Section
             </a>
