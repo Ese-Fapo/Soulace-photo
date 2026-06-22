@@ -5,28 +5,29 @@ import { navLinks } from '../assets/asset'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const bookingHref = '#contact'
 
   const closeMenu = () => setIsOpen(false)
 
   return (
     <nav className='fixed top-0 left-0 z-50 w-full bg-white/90 shadow-sm backdrop-blur-sm'>
       <div className='container mx-auto px-4 py-3 sm:px-6 lg:py-4'>
-        <div className='flex items-center justify-between'>
+        <div className='flex min-w-0 items-center justify-between gap-3'>
           {/* Logo */}
           <a
             href='#home'
             onClick={closeMenu}
-            className='flex min-w-0 items-center gap-2 font-playerfair font-bold text-gradient-gold'
+            className='flex min-w-0 flex-1 items-center gap-2 font-playerfair font-bold text-gradient-gold xl:flex-none'
             aria-label='Solace-Foto home'
           >
             <span className='flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-full bg-gradient-gold text-base transition-colors duration-300 hover:bg-gradient-gold-hover'>
               <FaCamera />
             </span>
-            <span className='truncate text-2xl text-gradient-gold sm:text-3xl'>Solace-Foto</span>
+            <span className='truncate text-xl text-gradient-gold sm:text-3xl'>Solace-Foto</span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className='hidden items-center gap-8 xl:flex'>
+          <div className='hidden min-w-0 items-center gap-5 xl:flex 2xl:gap-6'>
             {navLinks.map((link) => (
               <a
                 key={link.id}
@@ -36,6 +37,12 @@ const Navbar = () => {
                 {link.id}
               </a>
             ))}
+            <a
+              href={bookingHref}
+              className='shrink-0 rounded-full bg-gradient-gold px-5 py-2.5 font-montserrat text-sm font-bold uppercase tracking-wide text-charcoal shadow-md shadow-gold/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gold/40'
+            >
+              Book a Section
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -69,6 +76,13 @@ const Navbar = () => {
                 {link.id}
               </a>
             ))}
+            <a
+              href={bookingHref}
+              onClick={closeMenu}
+              className='rounded-md bg-gradient-gold px-4 py-3 text-center font-montserrat text-sm font-bold uppercase tracking-wide text-charcoal shadow-md shadow-gold/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gold/40 sm:col-span-2 md:col-span-3'
+            >
+              Book a Section
+            </a>
           </div>
         </div>
       )}
