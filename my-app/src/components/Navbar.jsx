@@ -26,7 +26,7 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className='hidden items-center gap-8 lg:flex'>
+          <div className='hidden items-center gap-8 xl:flex'>
             {navLinks.map((link) => (
               <a
                 key={link.id}
@@ -41,7 +41,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             type='button'
-            className='flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-charcoal transition-colors duration-300 hover:bg-cream lg:hidden'
+            className='flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-charcoal transition-colors duration-300 hover:bg-cream xl:hidden'
             onClick={() => setIsOpen((open) => !open)}
             aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={isOpen}
@@ -56,7 +56,7 @@ const Navbar = () => {
       {isOpen && (
         <div
           id='mobile-navigation'
-          className='border-t border-chamegane bg-white px-4 py-4 shadow-sm lg:hidden'
+          className='max-h-[calc(100vh-4.25rem)] overflow-y-auto border-t border-chamegane bg-white px-4 py-4 shadow-sm xl:hidden'
         >
           <div className='container mx-auto grid gap-2 sm:grid-cols-2 md:grid-cols-3'>
             {navLinks.map((link) => (
