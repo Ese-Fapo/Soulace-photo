@@ -32,8 +32,8 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav className='fixed left-0 right-0 top-0 z-50 w-full bg-white/95 shadow-sm backdrop-blur-sm'>
-      <div className='mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:py-4'>
+    <nav className='fixed left-0 right-0 top-0 z-50 w-full max-w-full overflow-x-clip bg-white/95 shadow-sm backdrop-blur-sm'>
+      <div className='mx-auto w-full max-w-7xl px-4 py-3 sm:px-6 lg:py-4'>
         <div className='flex min-w-0 items-center justify-between gap-3'>
           {/* Logo */}
           <a
@@ -87,7 +87,7 @@ const Navbar = () => {
       {isOpen && (
         <div
           id='mobile-navigation'
-          className='absolute left-0 right-0 top-full max-h-[calc(100vh-4.25rem)] overflow-y-auto border-t border-chamegane bg-white px-4 py-4 shadow-lg xl:hidden'
+          className='absolute left-0 right-0 top-full w-full max-w-full overflow-x-clip max-h-[calc(100vh-4.25rem)] overflow-y-auto border-t border-chamegane bg-white px-4 py-4 shadow-lg xl:hidden'
         >
           <div className='mx-auto grid max-w-7xl grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3'>
             {navLinks.map((link) => (

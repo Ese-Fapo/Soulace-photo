@@ -3,13 +3,41 @@
 @import "tailwindcss";
 
 /* custom styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
 :root {
-  --gold : #FFD166;
+  --gold : #D4AF37;
   --rose: #FF6B8B;
   --cream: #FFF9F0;
   --chamegane: #F5E6D3;
   --charcoal: #2D3047;
-}
+  --accent: #8B6F47;
+}   
 
 @theme{
   --font-playerfair: 'Playfair Display', serif;
@@ -20,6 +48,7 @@
   --color-cream: var(--cream);
   --color-chamegane: var(--chamegane);
   --color-charcoal: var(--charcoal);
+  --color-accent: var(--accent);
 
   --animate-float: float 6s ease-in-out infinite;
   --animate-fade-in: fadeIn 1s ease-in-out;
@@ -60,7 +89,7 @@
   background-clip: text;
 }
 .text-gradient-rose{
-  background: linear-gradient(135deg, #FF6B8B 0%, #FF8E9E 50%, #FF6B8B 100%);
+  background: linear-gradient(135deg, #CFA5A5 0%, #FF8E9E 50%, #FF6B8B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
