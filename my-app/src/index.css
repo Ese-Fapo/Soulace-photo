@@ -31,12 +31,12 @@ svg {
 }
 
 :root {
-  --gold : #D4AF37;
-  --rose: #FF6B8B;
+  --gold : #8F1D2C;
+  --rose: #B83A4B;
   --cream: #FFF9F0;
   --chamegane: #F5E6D3;
-  --charcoal: #2D3047;
-  --accent: #8B6F47;
+  --charcoal: #21161A;
+  --accent: #6F2833;
 }   
 
 @theme{
@@ -83,26 +83,26 @@ svg {
 }
 /* custom classes */
 .text-gradient-gold{
-  background: linear-gradient(135deg, #FDB931 0%, #FFD166 50%, #FDB931 100%);
+  background: linear-gradient(135deg, #6E1423 0%, #B91F3A 48%, #F2B8A0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .text-gradient-rose{
-  background: linear-gradient(135deg, #CFA5A5 0%, #FF8E9E 50%, #FF6B8B 100%);
+  background: linear-gradient(135deg, #7A1E2E 0%, #C74356 50%, #F0A38D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .bg-gradient-gold{
-  background: linear-gradient(135deg, #FDB931 0%, #FFD166 50%, #FDB931 100%);
+  background: linear-gradient(135deg, #6E1423 0%, #A51D35 52%, #D75A4A 100%);
 }
 .hover-gradient-gold:hover{
-  background: linear-gradient(135deg, #FF6B8B 0%, #FFD166 50%, #FF6B8B 100%);
+  background: linear-gradient(135deg, #4F0F1A 0%, #8F1D2C 50%, #C74356 100%);
   color: whitesmoke;
 }
 .bg-gradient-rose{
-  background: linear-gradient(135deg, #FF6B8B 0%, #FF8E9E 50%, #FF6B8B 100%);
+  background: linear-gradient(135deg, #8F1D2C 0%, #C74356 50%, #8F1D2C 100%);
 }
 .clip-path.hero {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
@@ -118,7 +118,7 @@ svg {
   top: -30px;
   left: 20px;
   font-size: 100px;
-  color: #FFD166;
+  color: #B91F3A;
   font-family: 'Playfair Display', serif;
   opacity: 0.2;
 }
@@ -149,7 +149,7 @@ svg {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: linear-gradient(135deg, #FDB931 0%, #FFD166 50%, #FDB931 100%);
+  background: linear-gradient(135deg, #6E1423 0%, #A51D35 52%, #D75A4A 100%);
   transition: transform 0.3s ;
 }
 .nav-link:hover::after {
@@ -166,7 +166,7 @@ svg {
   background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #FFD166 0%, #FDB931 50%, #FFD166 100%);
+  background: linear-gradient(135deg, #6E1423 0%, #A51D35 50%, #D75A4A 100%);
   border-radius: 4px;
 }
 /* glass effect */
