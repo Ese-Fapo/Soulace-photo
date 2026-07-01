@@ -11,7 +11,7 @@ import fashion2 from './image/fashion-2.jpg'
 import fashion from './image/fashion.jpg'
 import kidPotraite from './image/kid-potraite.jpg'
 import littleBrideGroom from './image/little-bride&groom.jpeg'
-import littleGirl from './image/littlegirl.jpeg'
+import littleGirl from './image/littlebriade.jpeg'
 import portraitMale from './image/portrait-male.avif'
 import potrait001 from './image/potrait-001.jpg'
 import potrait002 from './image/potrait-002.jpg'
@@ -244,35 +244,171 @@ export const portfolioItems = [
         mainCategory: 'People & Events',
         image: images.family4,
     },
-    // People & Events - Events
     {
         id: 8,
+        title: 'Kid Portrait',
+        category: 'Portraits',
+        mainCategory: 'People & Events',
+        image: images.kidPotraite,
+    },
+    {
+        id: 9,
+        title: 'Studio Portrait',
+        category: 'Portraits',
+        mainCategory: 'People & Events',
+        image: images.potrait001,
+    },
+    {
+        id: 10,
+        title: 'Editorial Portrait',
+        category: 'Portraits',
+        mainCategory: 'People & Events',
+        image: images.potrait002,
+    },
+    {
+        id: 11,
+        title: 'Male Portrait',
+        category: 'Portraits',
+        mainCategory: 'People & Events',
+        image: images.potraitMale,
+    },
+    {
+        id: 12,
+        title: 'Modern Male Portrait',
+        category: 'Portraits',
+        mainCategory: 'People & Events',
+        image: images.portraitMale,
+    },
+    // People & Events - Events
+    {
+        id: 13,
+        title: 'Event Celebration',
+        category: 'Events',
+        mainCategory: 'People & Events',
+        image: images.event01,
+    },
+    {
+        id: 14,
+        title: 'Grand Event Hall',
+        category: 'Events',
+        mainCategory: 'People & Events',
+        image: images.event2,
+    },
+    {
+        id: 15,
+        title: 'Cinematic Event Space',
+        category: 'Events',
+        mainCategory: 'People & Events',
+        image: images.event3,
+    },
+    {
+        id: 16,
+        title: 'Evening Event Design',
+        category: 'Events',
+        mainCategory: 'People & Events',
+        image: images.event4,
+    },
+    {
+        id: 17,
         title: 'Reception Venue',
         category: 'Events',
         mainCategory: 'People & Events',
         image: images.reception,
     },
     {
-        id: 9,
+        id: 18,
         title: 'Reception Setup',
         category: 'Events',
         mainCategory: 'People & Events',
         image: images.receptionJpg,
     },
+    // People & Events - Fashion
+    {
+        id: 19,
+        title: 'Fashion Editorial',
+        category: 'Fashion',
+        mainCategory: 'People & Events',
+        image: images.fashion,
+    },
+    {
+        id: 20,
+        title: 'Fashion Campaign',
+        category: 'Fashion',
+        mainCategory: 'People & Events',
+        image: images.fashion2,
+    },
+    // Business & Commercial - Product Photography
+    {
+        id: 21,
+        title: 'Product Detail',
+        category: 'Product Photography',
+        mainCategory: 'Business & Commercial',
+        image: images.product,
+    },
+    {
+        id: 22,
+        title: 'Studio Product Photo',
+        category: 'Product Photography',
+        mainCategory: 'Business & Commercial',
+        image: images.productPhoto,
+    },
+    {
+        id: 23,
+        title: 'Commercial Product Photo',
+        category: 'Product Photography',
+        mainCategory: 'Business & Commercial',
+        image: images.productPhoto2,
+    },
     // Business & Commercial - Food Photography
     {
-        id: 10,
+        id: 24,
         title: 'Reception Food Display',
         category: 'Food Photography',
         mainCategory: 'Business & Commercial',
         image: images.receptionFood,
     },
     {
-        id: 11,
+        id: 25,
         title: 'Wedding Food Catering',
         category: 'Food Photography',
         mainCategory: 'Business & Commercial',
         image: images.weddingFood,
+    },
+    // Business & Commercial - Real Estate Photography
+    {
+        id: 26,
+        title: 'Modern Real Estate Interior',
+        category: 'Real Estate Photography',
+        mainCategory: 'Business & Commercial',
+        image: images.realEstate,
+    },
+    {
+        id: 27,
+        title: 'Residential Listing',
+        category: 'Real Estate Photography',
+        mainCategory: 'Business & Commercial',
+        image: images.realEstate1,
+    },
+    {
+        id: 28,
+        title: 'Property Exterior',
+        category: 'Real Estate Photography',
+        mainCategory: 'Business & Commercial',
+        image: images.realEstate2,
+    },
+    {
+        id: 29,
+        title: 'Luxury Property Detail',
+        category: 'Real Estate Photography',
+        mainCategory: 'Business & Commercial',
+        image: images.realestate,
+    },
+    {
+        id: 30,
+        title: 'Architectural Real Estate',
+        category: 'Real Estate Photography',
+        mainCategory: 'Business & Commercial',
+        image: images.realestate2,
     },
 ];
 
