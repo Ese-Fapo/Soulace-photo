@@ -1,8 +1,8 @@
 import images, { assets } from '../assets/asset'
 
 const highlights = [
-  { value: '10+', label: 'Years behind the lens' },
-  { value: '200+', label: 'Edited galleries delivered' },
+  { value: '15+', label: 'Years behind the lens' },
+  { value: '300+', label: 'Edited galleries delivered' },
   { value: '48h', label: 'Preview turnaround' },
 ]
 

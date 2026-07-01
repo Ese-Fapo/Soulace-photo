@@ -79,7 +79,10 @@ const Portfolio = () => {
         {filteredItems.length > 0 ? (
           <>
             <div className="mt-7 flex flex-col gap-2 border-y border-chamegane py-4 font-inter text-sm text-charcoal/70 sm:flex-row sm:items-center sm:justify-between">
-              <span>
+              <span className="sm:hidden">
+                Showing <strong className="text-charcoal">{Math.min(filteredItems.length, 5)}</strong> of <strong className="text-charcoal">{filteredItems.length}</strong> {activeFilterName.toLowerCase()} projects
+              </span>
+              <span className="hidden sm:inline">
                 Showing <strong className="text-charcoal">{filteredItems.length}</strong> {activeFilterName.toLowerCase()} projects
               </span>
               <span className="text-charcoal/55">
@@ -96,13 +99,13 @@ const Portfolio = () => {
 
                 return (
                   <article
-                    key={item.id}
-                    className={`group relative min-w-0 overflow-hidden rounded-lg bg-charcoal shadow-lg shadow-charcoal/10 ${
-                      isFeatured
-                        ? 'aspect-[4/5] min-[520px]:col-span-2 min-[520px]:aspect-[16/10]'
-                        : 'aspect-[4/3]'
-                    }`}
-                  >
+                  key={item.id}
+                  className={`group relative min-w-0 overflow-hidden rounded-lg bg-charcoal shadow-lg shadow-charcoal/10 ${
+                    isFeatured
+                      ? 'aspect-[4/5] min-[520px]:col-span-2 min-[520px]:aspect-[16/10]'
+                      : 'aspect-[4/3]'
+                  } ${index >= 5 ? 'hidden sm:block' : ''}`}
+                >
                     <img
                       src={item.image}
                       alt={item.title}
@@ -128,6 +131,17 @@ const Portfolio = () => {
                 )
               })}
             </div>
+
+            {filteredItems.length > 5 && (
+              <div className="mt-6 text-center sm:hidden">
+                <a
+                  href="#gallery"
+                  className="inline-flex rounded-full bg-gradient-gold px-6 py-3 font-inter text-xs font-bold uppercase tracking-[0.12em] text-white shadow-lg shadow-gold/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-gold/30"
+                >
+                  See more photos
+                </a>
+              </div>
+            )}
           </>
         ) : (
           <div className="mt-10 rounded-lg border border-chamegane bg-white p-8 text-center font-inter text-charcoal/75">

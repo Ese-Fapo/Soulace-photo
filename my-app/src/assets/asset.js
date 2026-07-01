@@ -64,9 +64,9 @@ const images = {
 import {
     FaCamera,
     FaEnvelope,
-    FaFacebook,
+    FaFacebookF,
     FaInstagram,
-    FaLinkedin,
+    FaLinkedinIn,
     FaMapMarkerAlt,
     FaPhoneAlt,
     FaWhatsapp,
@@ -107,8 +107,8 @@ export const contactInfo = [
         id: 3,
         icon: FaWhatsapp,
         label: "WhatsApp",
-        value: "+55 (11) 98888-8888",
-        href: "https://wa.me/5511988888888"
+        value: "+234 902 524 6915",
+        href: "https://wa.me/2349025246915"
     },
     {
         id: 4,
@@ -139,13 +139,13 @@ export const socialLinks = [
     },
     {
         id: 2,
-        icon: FaFacebook,
+        icon: FaFacebookF,
         label: "Facebook",
         href: "https://facebook.com/"
     },
     {
         id: 3,
-        icon: FaLinkedin,
+        icon: FaLinkedinIn,
         label: "LinkedIn",
         href: "https://linkedin.com/"
     },
@@ -153,7 +153,7 @@ export const socialLinks = [
         id: 4,
         icon: FaWhatsapp,
         label: "WhatsApp",
-        href: "https://wa.me/5511988888888"
+        href: "https://wa.me/2349025246915"
     }
 ];
 
@@ -171,9 +171,9 @@ export const quickLinks = [
 export const quickLink = quickLinks;
 
 export const stats =[
-    {number: '10+', title: 'Years of Experience'},
-    {number: '100+', title: 'Happy Clients'},
-    {number: '200+', title: 'Projects Completed'},
+    {number: '15+', title: 'Years of Experience'},
+    {number: '150+', title: 'Happy Clients'},
+    {number: '300+', title: 'Projects Completed'},
     {number: '50+', title: 'Awards Won'},
 ];
 
@@ -188,7 +188,7 @@ export const portfolioCategories = [
     },
     {
         name: 'Outdoor & Adventure',
-        items: ['Sports Photography', 'Wildlife Photography', 'Travel Photography']
+        items: ['Travel Photography']
     }
 ];
 
@@ -528,38 +528,6 @@ export const services = [
         color: "green"
     },
     // Outdoor & Adventure
-    {
-        id: 8,
-        icon: FaCamera,
-        title: "Sports Photography",
-        category: "Outdoor & Adventure",
-        description: "Capture dynamic action and thrilling moments in sports with professional sports photography.",
-        features: [
-            "High-speed continuous shooting",
-            "Action freezing",
-            "Team coverage",
-            "Event highlights",
-            "Professional editing",
-            "Print options available"
-        ],
-        color: "cyan"
-    },
-    {
-        id: 9,
-        icon: FaCamera,
-        title: "Wildlife Photography",
-        category: "Outdoor & Adventure",
-        description: "Stunning wildlife photography showcasing nature's beauty and animal behavior.",
-        features: [
-            "Expert tracking techniques",
-            "Natural lighting",
-            "Rare moments captured",
-            "Conservation-focused",
-            "Gallery-quality prints",
-            "Educational content"
-        ],
-        color: "green"
-    },
     {
         id: 10,
         icon: FaCamera,

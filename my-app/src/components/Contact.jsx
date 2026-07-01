@@ -1,5 +1,12 @@
 import { contactInfo, socialLinks } from '../assets/asset'
 
+const socialBrandClasses = {
+  Instagram: 'bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#FCAF45] hover:shadow-[#E1306C]/30',
+  Facebook: 'bg-[#1877F2] hover:shadow-[#1877F2]/30',
+  LinkedIn: 'bg-[#0A66C2] hover:shadow-[#0A66C2]/30',
+  WhatsApp: 'bg-[#25D366] hover:shadow-[#25D366]/30',
+}
+
 const Contact = () => {
   return (
     <section id="contact" className="w-full max-w-full overflow-x-clip bg-cream px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
@@ -29,9 +36,9 @@ const Contact = () => {
             key={item.id}
             href={item.href}
             aria-label={item.label}
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-charcoal text-white transition-colors duration-300 hover:bg-rose sm:h-12 sm:w-12"
+            className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-white shadow-lg shadow-charcoal/15 transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:shadow-xl sm:h-12 sm:w-12 ${socialBrandClasses[item.label] ?? 'bg-charcoal hover:bg-rose'}`}
           >
-            <Icon className="max-w-full" />
+            <Icon className="max-w-full text-lg sm:text-xl" />
           </a>
         )
       })}
