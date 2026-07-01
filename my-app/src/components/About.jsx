@@ -9,7 +9,7 @@ const About = () => {
           src={assets.aboutImg}
           alt="Bride portrait"
         />
-        <div className="flex w-full min-w-0 max-w-2xl items-center font-montserrat text-base leading-7 text-charcoal sm:text-lg md:max-w-none">
+        <div className="flex w-full min-w-0 max-w-2xl items-center font-inter text-base leading-7 text-charcoal sm:text-lg md:max-w-none">
           About
         </div>
       </div>

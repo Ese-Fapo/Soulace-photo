@@ -7,6 +7,7 @@ import Services from './components/Services'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Aos from 'aos'
+import Portfolio from './components/Portfolio'
 
 const App = () => {
   // init aos
@@ -21,8 +22,10 @@ const App = () => {
     <div className='w-full max-w-full overflow-x-clip'>
       <Navbar />
       <Hero />
-      <About />
       <Stats />
+      <Portfolio />
+      <About />
+      
       <Services />
       <Contact />
       <Footer />

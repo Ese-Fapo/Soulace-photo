@@ -39,7 +39,7 @@ const Navbar = () => {
           <a
             href='#home'
             onClick={closeMenu}
-            className='flex min-w-0 flex-1 items-center gap-2 font-playerfair font-bold text-gradient-gold xl:flex-none'
+            className='flex min-w-0 flex-1 items-center gap-2 font-roboto font-bold text-gradient-gold xl:flex-none'
             aria-label='Solace-Foto home'
           >
             <span className='flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full bg-gradient-gold text-xs text-white transition-colors duration-300 hover:bg-gradient-gold-hover min-[380px]:h-9 min-[380px]:w-9 min-[380px]:text-sm sm:h-10 sm:w-10 sm:text-base'>
@@ -56,14 +56,14 @@ const Navbar = () => {
               <a
                 key={link.id}
                 href={link.href}
-                className='nav-link relative font-montserrat text-sm font-semibold uppercase tracking-wide text-charcoal transition-colors duration-300 hover:text-rose'
+                className='nav-link relative font-inter text-sm font-semibold uppercase tracking-wide text-charcoal transition-colors duration-300 hover:text-rose'
               >
                 {link.id}
               </a>
             ))}
             <a
               href={bookingHref}
-              className='shrink-0 rounded-full bg-gradient-gold px-5 py-2.5 font-montserrat text-sm font-bold uppercase tracking-wide text-white shadow-md shadow-gold/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gold/40'
+              className='shrink-0 rounded-full bg-gradient-gold px-5 py-2.5 font-inter text-sm font-bold uppercase tracking-wide text-white shadow-md shadow-gold/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gold/40'
             >
               Book a Session
             </a>
@@ -95,7 +95,7 @@ const Navbar = () => {
                 key={link.id}
                 href={link.href}
                 onClick={closeMenu}
-                className='rounded-md px-3 py-3 text-center font-montserrat text-xs font-semibold uppercase tracking-wide text-charcoal transition-colors duration-300 hover:bg-cream hover:text-rose focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold min-[380px]:text-sm sm:px-4'
+                className='rounded-md px-3 py-3 text-center font-inter text-xs font-semibold uppercase tracking-wide text-charcoal transition-colors duration-300 hover:bg-cream hover:text-rose focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold min-[380px]:text-sm sm:px-4'
               >
                 {link.id}
               </a>
@@ -103,7 +103,7 @@ const Navbar = () => {
             <a
               href={bookingHref}
               onClick={closeMenu}
-              className='rounded-md bg-gradient-gold px-3 py-3 text-center font-montserrat text-xs font-bold uppercase tracking-wide text-white shadow-md shadow-gold/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gold/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal min-[380px]:text-sm sm:col-span-2 sm:px-4 md:col-span-3'
+              className='rounded-md bg-gradient-gold px-3 py-3 text-center font-inter text-xs font-bold uppercase tracking-wide text-white shadow-md shadow-gold/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gold/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal min-[380px]:text-sm sm:col-span-2 sm:px-4 md:col-span-3'
             >
               Book a Session
             </a>

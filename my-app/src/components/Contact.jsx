@@ -11,7 +11,7 @@ const Contact = () => {
           <a
             key={item.id}
             href={item.href}
-            className="flex min-w-0 max-w-full items-center gap-3 rounded-lg bg-white p-4 font-montserrat text-sm text-charcoal shadow-sm transition-transform duration-300 hover:-translate-y-0.5 sm:min-h-20"
+            className="flex min-w-0 max-w-full items-center gap-3 rounded-lg bg-white p-4 font-inter text-sm text-charcoal shadow-sm transition-transform duration-300 hover:-translate-y-0.5 sm:min-h-20"
           >
             <Icon className="shrink-0 text-base text-gold sm:text-lg" />
             <span className="min-w-0 overflow-hidden break-words leading-6">{item.value}</span>

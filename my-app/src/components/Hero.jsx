@@ -21,17 +21,17 @@ const Hero = () => {
           <div className='min-w-0 text-center lg:text-left'>
             <div className='mx-auto mb-4 flex w-fit max-w-full items-center gap-2 border-y border-[#eac1b2]/30 px-2.5 py-2 min-[380px]:gap-3 min-[380px]:px-3 sm:mb-5 lg:mx-0'>
               <span className='h-px w-5 shrink-0 bg-[#e66f64] min-[380px]:w-8'></span>
-              <p className='font-montserrat text-[0.63rem] font-bold uppercase tracking-[0.14em] text-[#f2b8a0] min-[380px]:text-[0.68rem] min-[380px]:tracking-[0.2em] sm:text-xs sm:tracking-[0.26em]'>
+              <p className='font-inter text-[0.63rem] font-bold uppercase tracking-[0.14em] text-[#f2b8a0] min-[380px]:text-[0.68rem] min-[380px]:tracking-[0.2em] sm:text-xs sm:tracking-[0.26em]'>
                 Luxury photography studio
               </p>
             </div>
 
-            <h1 className='mx-auto max-w-full break-words font-playerfair text-4xl font-bold leading-[1.02] text-white min-[380px]:max-w-[25rem] min-[380px]:text-5xl sm:max-w-2xl sm:text-6xl sm:leading-[0.98] md:text-7xl lg:mx-0 lg:max-w-3xl xl:text-8xl'>
+            <h1 className='mx-auto max-w-full break-words font-roboto text-4xl font-bold leading-[1.02] text-white min-[380px]:max-w-[25rem] min-[380px]:text-5xl sm:max-w-2xl sm:text-6xl sm:leading-[0.98] md:text-7xl lg:mx-0 lg:max-w-3xl xl:text-8xl'>
               Images that feel
               <span className='block text-gradient-gold'>cinematic and intimate</span>
             </h1>
 
-            <p className='mx-auto mt-6 max-w-full font-montserrat text-sm leading-7 text-[#f8ece7]/86 sm:max-w-xl sm:text-base sm:leading-8 md:text-lg lg:mx-0 lg:max-w-2xl'>
+            <p className='mx-auto mt-6 max-w-full font-inter text-sm leading-7 text-[#f8ece7]/86 sm:max-w-xl sm:text-base sm:leading-8 md:text-lg lg:mx-0 lg:max-w-2xl'>
               Solace-Foto creates refined wedding, portrait, and event imagery with
               dramatic color, honest emotion, and careful attention to every quiet
               detail.
@@ -40,13 +40,13 @@ const Hero = () => {
             <div className='mx-auto mt-7 flex w-full max-w-full flex-col gap-3 sm:mt-8 sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center lg:mx-0 lg:justify-start'>
               <a
                 href='#contact'
-                className='w-full max-w-full rounded-full bg-gradient-gold px-5 py-3.5 text-center font-montserrat text-xs font-bold uppercase tracking-wide text-white shadow-xl shadow-[#7b1324]/35 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-[#a51d35]/45 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2b8a0] min-[380px]:text-sm sm:w-auto sm:px-7'
+                className='w-full max-w-full rounded-full bg-gradient-gold px-5 py-3.5 text-center font-inter text-xs font-bold uppercase tracking-wide text-white shadow-xl shadow-[#7b1324]/35 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-[#a51d35]/45 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2b8a0] min-[380px]:text-sm sm:w-auto sm:px-7'
               >
                 Book a Session
               </a>
               <a
                 href='#portfolio'
-                className='w-full max-w-full rounded-full border border-[#f2b8a0]/55 px-5 py-3.5 text-center font-montserrat text-xs font-bold uppercase tracking-wide text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-[#f2b8a0] hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white min-[380px]:text-sm sm:w-auto sm:px-7'
+                className='w-full max-w-full rounded-full border border-[#f2b8a0]/55 px-5 py-3.5 text-center font-inter text-xs font-bold uppercase tracking-wide text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-[#f2b8a0] hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white min-[380px]:text-sm sm:w-auto sm:px-7'
               >
                 View Portfolio
               </a>
@@ -56,7 +56,7 @@ const Hero = () => {
               {heroHighlights.map((item) => (
                 <span
                   key={item}
-                  className='rounded-full border border-[#f2b8a0]/25 bg-white/[0.06] px-3 py-2 font-montserrat text-[0.66rem] font-semibold uppercase tracking-[0.12em] text-[#f8ece7]/82 min-[380px]:px-4 min-[380px]:text-xs min-[380px]:tracking-[0.18em]'
+                  className='rounded-full border border-[#f2b8a0]/25 bg-white/[0.06] px-3 py-2 font-inter text-[0.66rem] font-semibold uppercase tracking-[0.12em] text-[#f8ece7]/82 min-[380px]:px-4 min-[380px]:text-xs min-[380px]:tracking-[0.18em]'
                 >
                   {item}
                 </span>
@@ -82,8 +82,8 @@ const Hero = () => {
                 <div className='absolute inset-0 bg-gradient-to-t from-[#18090d]/76 via-transparent to-transparent'></div>
               </div>
               <div className='absolute bottom-6 left-0 max-w-[14rem] border-l-2 border-[#e66f64] bg-[#18090d]/76 p-4 text-left shadow-xl shadow-black/30 backdrop-blur-md lg:bottom-8 lg:max-w-[16rem] lg:p-5'>
-                <p className='font-playerfair text-3xl font-bold leading-none text-[#f2b8a0] lg:text-4xl'>10+</p>
-                <p className='mt-2 font-montserrat text-xs font-semibold uppercase tracking-[0.18em] text-white/76'>
+                <p className='font-roboto text-3xl font-bold leading-none text-[#f2b8a0] lg:text-4xl'>10+</p>
+                <p className='mt-2 font-inter text-xs font-semibold uppercase tracking-[0.18em] text-white/76'>
                   Years preserving elegant stories
                 </p>
               </div>

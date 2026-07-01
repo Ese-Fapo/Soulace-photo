@@ -5,13 +5,13 @@ const Footer = () => {
     <footer className="w-full max-w-full overflow-x-clip bg-charcoal px-4 py-8 text-white sm:px-6 sm:py-10">
       <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-center gap-x-4 gap-y-3 sm:gap-x-5">
       {quickLinks.map((link) => (
-        <a key={link.id} href={link.href} className="max-w-full break-words text-center font-montserrat text-xs text-white/80 hover:text-gold min-[380px]:text-sm">
+        <a key={link.id} href={link.href} className="max-w-full break-words text-center font-inter text-xs text-white/80 hover:text-gold min-[380px]:text-sm">
           {link.label}
         </a>
       ))}
 
       {serviceLinks.map((link) => (
-        <a key={link.id} href={link.href} className="max-w-full break-words text-center font-montserrat text-xs text-white/80 hover:text-gold min-[380px]:text-sm">
+        <a key={link.id} href={link.href} className="max-w-full break-words text-center font-inter text-xs text-white/80 hover:text-gold min-[380px]:text-sm">
           {link.label}
         </a>
       ))}
