@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { portfolioItems } from '../assets/asset'
 
@@ -14,6 +14,7 @@ const filters = [
 ]
 
 const categoryLabelKeys = {
+  all: 'categories.all',
   Weddings: 'categories.weddings',
   Portraits: 'categories.portraits',
   Events: 'categories.events',
@@ -23,9 +24,22 @@ const categoryLabelKeys = {
   'Real Estate Photography': 'categories.realEstatePhotography',
 }
 
-const Gallery = () => {
+const getFilterFromRoute = (route) => {
+  const query = route.split('?')[1] ?? ''
+  const category = new URLSearchParams(query).get('category') ?? 'all'
+
+  return filters.some((item) => item.value === category) ? category : 'all'
+}
+
+const getGalleryHref = (category) => `#gallery?category=${encodeURIComponent(category)}`
+
+const Gallery = ({ route }) => {
   const { t } = useTranslation()
-  const [filter, setFilter] = useState('all')
+  const [filter, setFilter] = useState(() => getFilterFromRoute(route))
+
+  useEffect(() => {
+    setFilter(getFilterFromRoute(route))
+  }, [route])
 
   const filteredItems = useMemo(() => {
     if (filter === 'all') {
@@ -34,6 +48,12 @@ const Gallery = () => {
 
     return portfolioItems.filter((item) => item.category === filter)
   }, [filter])
+
+  const activeFilter = filters.find((item) => item.value === filter) ?? filters[0]
+  const activeLabel = t(activeFilter.labelKey)
+  const galleryDescriptionKey = filter === 'all'
+    ? 'gallery.description'
+    : `portfolio.categoryCards.${filter}.galleryIntro`
 
   return (
     <main className="min-h-screen w-full max-w-full overflow-x-clip bg-cream px-4 pb-12 pt-28 sm:px-6 sm:pb-16 lg:pb-20">
@@ -47,10 +67,18 @@ const Gallery = () => {
               {t('gallery.back')}
             </a>
             <h1 className="mt-4 break-words font-roboto text-4xl font-black leading-tight text-charcoal sm:text-5xl">
-              {t('gallery.titleStart')} <span className="text-gradient-gold">{t('gallery.titleHighlight')}</span>
+              {filter === 'all' ? (
+                <>
+                  {t('gallery.titleStart')} <span className="text-gradient-gold">{t('gallery.titleHighlight')}</span>
+                </>
+              ) : (
+                <>
+                  {activeLabel} <span className="text-gradient-gold">{t('gallery.titleHighlight')}</span>
+                </>
+              )}
             </h1>
             <p className="mt-4 max-w-2xl font-inter text-sm leading-7 text-charcoal/75 sm:text-base">
-              {t('gallery.description')}
+              {t(galleryDescriptionKey)}
             </p>
           </div>
 
@@ -67,7 +95,10 @@ const Gallery = () => {
               <button
                 key={item.value}
                 type="button"
-                onClick={() => setFilter(item.value)}
+                onClick={() => {
+                  setFilter(item.value)
+                  window.location.hash = getGalleryHref(item.value)
+                }}
                 className={`shrink-0 rounded-full border px-4 py-2 font-inter text-[0.68rem] font-bold uppercase tracking-[0.12em] transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold min-[380px]:text-xs sm:px-5 ${
                   isActive
                     ? 'border-transparent bg-gradient-gold text-white shadow-lg shadow-gold/25'
@@ -96,9 +127,6 @@ const Gallery = () => {
                 <p className="font-inter text-[0.65rem] font-bold uppercase tracking-[0.16em] text-[#f2b8a0]">
                   {t(categoryLabelKeys[item.category])}
                 </p>
-                <h2 className="mt-1 break-words font-roboto text-lg font-black leading-tight text-white sm:text-xl">
-                  {t(`portfolio.items.${item.id}`)}
-                </h2>
               </div>
             </article>
           ))}

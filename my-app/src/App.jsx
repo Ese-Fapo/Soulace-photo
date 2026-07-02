@@ -33,16 +33,16 @@ const App = () => {
   }, [])
 
   useEffect(() => {
-    if (route === '#gallery') {
+    if (route.startsWith('#gallery')) {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }, [route])
 
-  if (route === '#gallery') {
+  if (route.startsWith('#gallery')) {
     return (
       <div className='w-full max-w-full overflow-x-clip'>
         <Navbar />
-        <Gallery />
+        <Gallery route={route} />
         <Footer />
         <FloatingWhatsApp />
       </div>

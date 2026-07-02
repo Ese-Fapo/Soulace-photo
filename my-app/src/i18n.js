@@ -64,6 +64,58 @@ const resources = {
         titleHighlight: 'Portfolio',
         description:
           'A curated look at weddings, portraits, events, and commercial photography shaped with warm color, cinematic framing, and careful detail.',
+        photoCount: '{{count}} photos',
+        viewMore: 'View more',
+        categoryCards: {
+          all: {
+            description:
+              'Start with the full collection and wander through every kind of story we photograph.',
+            galleryIntro:
+              'Explore the complete collection across portraits, weddings, events, fashion, commercial work, food, and real estate.',
+          },
+          Weddings: {
+            description:
+              'Elegant, emotional wedding stories preserved from the quiet details to the final celebration.',
+            galleryIntro:
+              'Browse wedding images filled with intimate portraits, ceremony moments, and celebration details.',
+          },
+          Portraits: {
+            description:
+              'Natural portraits for families, children, professionals, and personal milestones.',
+            galleryIntro:
+              'See portraits shaped with flattering light, relaxed direction, and genuine expression.',
+          },
+          Events: {
+            description:
+              'Atmospheric coverage for gatherings, receptions, corporate moments, and special celebrations.',
+            galleryIntro:
+              'View event photography that captures atmosphere, connection, design, and the moments people remember.',
+          },
+          Fashion: {
+            description:
+              'Editorial images with confident styling, polished light, and a strong visual point of view.',
+            galleryIntro:
+              'Browse fashion work created with editorial framing, refined styling, and polished presentation.',
+          },
+          'Product Photography': {
+            description:
+              'Clean, sales-ready product imagery built to make details, texture, and quality stand out.',
+            galleryIntro:
+              'View product photography designed for launches, catalogs, e-commerce, and brand storytelling.',
+          },
+          'Food Photography': {
+            description:
+              'Appetizing images for menus, restaurants, catering, and culinary brands.',
+            galleryIntro:
+              'Browse food photography focused on appetite, texture, color, and presentation.',
+          },
+          'Real Estate Photography': {
+            description:
+              'Bright property images that make rooms feel inviting, spacious, and ready to visit.',
+            galleryIntro:
+              'See real estate photography that highlights space, light, architecture, and listing appeal.',
+          },
+        },
         showingMobile: 'Showing {{visible}} of {{total}} {{category}} projects',
         showingDesktop: 'Showing {{total}} {{category}} projects',
         refine: 'Tap a category to refine the gallery.',
@@ -361,6 +413,58 @@ const resources = {
         titleHighlight: 'Portfólio',
         description:
           'Uma seleção de casamentos, retratos, eventos e fotografia comercial criada com cores acolhedoras, enquadramento cinematográfico e cuidado nos detalhes.',
+        photoCount: '{{count}} fotos',
+        viewMore: 'Ver mais',
+        categoryCards: {
+          all: {
+            description:
+              'Comece pela coleção completa e explore todos os tipos de histórias que fotografamos.',
+            galleryIntro:
+              'Explore a coleção completa de retratos, casamentos, eventos, moda, trabalhos comerciais, gastronomia e imóveis.',
+          },
+          Weddings: {
+            description:
+              'Histórias de casamento elegantes e emocionantes, dos detalhes silenciosos à celebração final.',
+            galleryIntro:
+              'Veja imagens de casamento com retratos íntimos, momentos da cerimônia e detalhes da celebração.',
+          },
+          Portraits: {
+            description:
+              'Retratos naturais para famílias, crianças, profissionais e marcos pessoais.',
+            galleryIntro:
+              'Veja retratos criados com luz valorizadora, direção leve e expressão verdadeira.',
+          },
+          Events: {
+            description:
+              'Cobertura cheia de atmosfera para encontros, recepções, momentos corporativos e celebrações especiais.',
+            galleryIntro:
+              'Veja fotografia de eventos que captura atmosfera, conexão, design e os momentos que ficam na memória.',
+          },
+          Fashion: {
+            description:
+              'Imagens editoriais com styling confiante, luz refinada e uma direção visual marcante.',
+            galleryIntro:
+              'Explore trabalhos de moda com enquadramento editorial, styling refinado e apresentação polida.',
+          },
+          'Product Photography': {
+            description:
+              'Imagens de produto limpas e prontas para vender, destacando detalhes, textura e qualidade.',
+            galleryIntro:
+              'Veja fotografia de produto criada para lançamentos, catálogos, e-commerce e narrativa de marca.',
+          },
+          'Food Photography': {
+            description:
+              'Imagens apetitosas para cardápios, restaurantes, buffets e marcas gastronômicas.',
+            galleryIntro:
+              'Explore fotografia gastronômica focada em apetite, textura, cor e apresentação.',
+          },
+          'Real Estate Photography': {
+            description:
+              'Imagens imobiliárias claras que fazem os ambientes parecerem convidativos, amplos e prontos para visita.',
+            galleryIntro:
+              'Veja fotografia imobiliária que destaca espaço, luz, arquitetura e apelo para anúncios.',
+          },
+        },
         showingMobile: 'Mostrando {{visible}} de {{total}} projetos de {{category}}',
         showingDesktop: 'Mostrando {{total}} projetos de {{category}}',
         refine: 'Toque em uma categoria para filtrar a galeria.',
