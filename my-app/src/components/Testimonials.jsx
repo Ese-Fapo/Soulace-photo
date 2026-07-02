@@ -1,5 +1,6 @@
 import { FaStar } from 'react-icons/fa'
 import { FcGoogle } from 'react-icons/fc'
+import { useTranslation } from 'react-i18next'
 
 const reviews = [
   {
@@ -47,16 +48,18 @@ const reviews = [
 ]
 
 const Testimonials = () => {
+  const { t } = useTranslation()
+
   return (
     <section id="testimonials" className="w-full max-w-full overflow-x-clip bg-white px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
       <div className="mx-auto w-full max-w-7xl">
         <div className="grid gap-6 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)] lg:items-end">
           <div data-aos="fade-up" className="min-w-0">
             <p className="font-inter text-xs font-bold uppercase tracking-[0.22em] text-gold">
-              Google reviews
+              {t('testimonials.eyebrow')}
             </p>
             <h2 className="mt-3 max-w-2xl break-words font-roboto text-4xl font-black leading-tight text-charcoal sm:text-5xl">
-            What our clients says
+            {t('testimonials.title')}
             </h2>
           </div>
 
@@ -74,7 +77,7 @@ const Testimonials = () => {
                 </div>
               </div>
               <p className="min-w-0 font-inter text-sm leading-6 text-charcoal/70">
-                Based on recent Google-style client reviews.
+                {t('testimonials.based')}
               </p>
             </div>
           </div>
@@ -94,7 +97,7 @@ const Testimonials = () => {
                     {review.name}
                   </h3>
                   <p className="mt-1 break-words font-inter text-xs font-semibold text-charcoal/60">
-                    {review.role} - {review.date}
+                    {t(`testimonials.reviews.${review.id}.role`)} - {t(`testimonials.reviews.${review.id}.date`)}
                   </p>
                 </div>
                 <FcGoogle className="shrink-0 text-2xl" />
@@ -107,7 +110,7 @@ const Testimonials = () => {
               </div>
 
               <p className="mt-4 flex-1 break-words font-inter text-sm leading-7 text-charcoal/75">
-                "{review.quote}"
+                "{t(`testimonials.reviews.${review.id}.quote`)}"
               </p>
             </article>
           ))}

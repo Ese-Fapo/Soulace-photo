@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { stats } from '../assets/asset'
 
 const parseStatNumber = (value) => {
@@ -76,6 +77,8 @@ const CountUpNumber = ({ value }) => {
 }
 
 const Stats = () => {
+  const { t } = useTranslation()
+
   return (
     <section className="relative w-full max-w-full overflow-x-clip border-y border-[#f2b8a0]/15 bg-[#17090d] px-4 py-10 sm:px-6 lg:py-14">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#f2b8a0]/55 to-transparent"></div>
@@ -99,7 +102,7 @@ const Stats = () => {
               <CountUpNumber value={item.number} />
             </strong>
             <span className="mx-auto mt-3 block max-w-[10rem] break-words font-inter text-[0.7rem] font-bold uppercase tracking-[0.18em] text-[#f8ece7]/78 min-[380px]:text-xs">
-              {item.title}
+              {t(`stats.items.${index}.title`)}
             </span>
           </article>
         ))}

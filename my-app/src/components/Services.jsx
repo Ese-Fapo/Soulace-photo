@@ -1,14 +1,22 @@
 import { useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { services } from '../assets/asset'
 
 const serviceFilters = [
-  { name: 'All', value: 'all' },
-  { name: 'People & Events', value: 'People & Events' },
-  { name: 'Commercial', value: 'Business & Commercial' },
-  { name: 'Outdoor', value: 'Outdoor & Adventure' },
+  { labelKey: 'categories.all', value: 'all' },
+  { labelKey: 'categories.peopleEvents', value: 'People & Events' },
+  { labelKey: 'categories.commercial', value: 'Business & Commercial' },
+  { labelKey: 'categories.outdoor', value: 'Outdoor & Adventure' },
 ]
 
+const categoryLabelKeys = {
+  'People & Events': 'categories.peopleEvents',
+  'Business & Commercial': 'categories.businessCommercial',
+  'Outdoor & Adventure': 'categories.outdoorAdventure',
+}
+
 const Services = () => {
+  const { t } = useTranslation()
   const [activeCategory, setActiveCategory] = useState('all')
 
   const visibleServices = useMemo(() => {
@@ -25,14 +33,14 @@ const Services = () => {
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1fr)] lg:items-end">
           <div data-aos="fade-up" className="min-w-0">
             <p className="font-inter text-xs font-bold uppercase tracking-[0.22em] text-gold">
-              Services
+              {t('services.eyebrow')}
             </p>
             <h2 className="mt-3 max-w-2xl break-words font-roboto text-4xl font-black leading-tight text-charcoal sm:text-5xl">
-              Photography coverage for every chapter of your story.
+              {t('services.title')}
             </h2>
           </div>
           <p data-aos="fade-up" data-aos-delay="100" className="max-w-2xl font-inter text-sm leading-7 text-charcoal/75 sm:text-base lg:ml-auto">
-            Choose focused coverage for weddings, portraits, events, products, food, real estate, fashion, sports, wildlife, and travel. Each service includes planning, guided direction, color editing, and delivery-ready image files.
+            {t('services.description')}
           </p>
         </div>
 
@@ -55,7 +63,7 @@ const Services = () => {
                     : 'border-chamegane bg-cream text-charcoal/75 hover:-translate-y-0.5 hover:border-gold hover:text-gold'
                 }`}
               >
-                {item.name}
+                {t(item.labelKey)}
               </button>
             )
           })}
@@ -77,19 +85,19 @@ const Services = () => {
                     <Icon className="text-lg" />
                   </span>
                   <span className="min-w-0 rounded-full border border-chamegane bg-white px-3 py-1 text-right font-inter text-[0.62rem] font-bold uppercase tracking-[0.12em] text-charcoal/60">
-                    {service.category}
+                    {t(categoryLabelKeys[service.category])}
                   </span>
                 </div>
 
                 <h3 className="mt-5 break-words font-roboto text-2xl font-black leading-tight text-charcoal">
-                  {service.title}
+                  {t(`services.items.${service.id}.title`)}
                 </h3>
                 <p className="mt-3 break-words font-inter text-sm leading-6 text-charcoal/75">
-                  {service.description}
+                  {t(`services.items.${service.id}.description`)}
                 </p>
 
                 <ul className="mt-5 space-y-2">
-                  {service.features.slice(0, 4).map((feature) => (
+                  {t(`services.items.${service.id}.features`, { returnObjects: true }).map((feature) => (
                     <li key={feature} className="flex gap-2 font-inter text-sm leading-6 text-charcoal/70">
                       <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold"></span>
                       <span className="min-w-0 break-words">{feature}</span>
@@ -101,7 +109,7 @@ const Services = () => {
                   href="#contact"
                   className="mt-6 inline-flex w-fit rounded-full border border-gold px-4 py-2 font-inter text-xs font-bold uppercase tracking-[0.12em] text-gold transition-all duration-300 hover:bg-gradient-gold hover:text-white"
                 >
-                  Ask about this
+                  {t('services.ask')}
                 </a>
               </article>
             )

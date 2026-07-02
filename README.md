@@ -1,4 +1,4 @@
-# Solace-Foto Photography Website
+# SoulAce-Foto Photography Website
 
 A responsive photography portfolio website built with React, Vite, Tailwind CSS, AOS animations, and React Icons.
 

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { contactInfo, quickLinks, serviceLinks, socialLinks } from '../assets/asset'
 
 const socialBrandClasses = {
@@ -8,8 +9,9 @@ const socialBrandClasses = {
 }
 
 const Footer = () => {
-  const phone = contactInfo.find((item) => item.label === 'Telefone')
-  const email = contactInfo.find((item) => item.label === 'Email')
+  const { t } = useTranslation()
+  const phone = contactInfo.find((item) => item.href.startsWith('tel:'))
+  const email = contactInfo.find((item) => item.href.startsWith('mailto:'))
   const currentYear = new Date().getFullYear()
 
   return (
@@ -25,11 +27,11 @@ const Footer = () => {
                 SF
               </span>
               <span className="min-w-0 break-words font-roboto text-2xl font-black text-gradient-gold">
-                Solace-Foto
+                SoulAce-Foto
               </span>
             </a>
             <p className="mt-5 max-w-md font-inter text-sm leading-7 text-white/68">
-              Refined photography for weddings, portraits, events, and commercial stories, crafted with calm direction and cinematic color.
+              {t('footer.description')}
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -52,7 +54,7 @@ const Footer = () => {
 
           <nav aria-label="Footer quick links" className="min-w-0">
             <h2 className="font-inter text-xs font-bold uppercase tracking-[0.2em] text-[#f2b8a0]">
-              Explore
+              {t('footer.explore')}
             </h2>
             <div className="mt-4 grid gap-2">
               {quickLinks.map((link) => (
@@ -61,7 +63,7 @@ const Footer = () => {
                   href={link.href}
                   className="w-fit max-w-full break-words font-inter text-sm text-white/72 transition-colors duration-300 hover:text-[#f2b8a0]"
                 >
-                  {link.label}
+                  {t(`nav.${link.href.replace('#', '')}`)}
                 </a>
               ))}
             </div>
@@ -69,16 +71,16 @@ const Footer = () => {
 
           <nav aria-label="Footer service links" className="min-w-0">
             <h2 className="font-inter text-xs font-bold uppercase tracking-[0.2em] text-[#f2b8a0]">
-              Services
+              {t('footer.services')}
             </h2>
             <div className="mt-4 grid gap-2">
-              {serviceLinks.map((link) => (
+              {serviceLinks.map((link, index) => (
                 <a
                   key={link.id}
                   href={link.href}
                   className="w-fit max-w-full break-words font-inter text-sm text-white/72 transition-colors duration-300 hover:text-[#f2b8a0]"
                 >
-                  {link.label}
+                  {t(`services.links.${index}`)}
                 </a>
               ))}
             </div>
@@ -86,10 +88,10 @@ const Footer = () => {
 
           <div className="min-w-0 rounded-lg border border-white/10 bg-white/[0.05] p-5">
             <h2 className="font-inter text-xs font-bold uppercase tracking-[0.2em] text-[#f2b8a0]">
-              Book a session
+              {t('footer.book')}
             </h2>
             <p className="mt-4 font-inter text-sm leading-7 text-white/68">
-              Tell us the date, location, and kind of story you want to preserve.
+              {t('footer.bookText')}
             </p>
 
             <div className="mt-5 grid gap-3">
@@ -109,14 +111,14 @@ const Footer = () => {
               href="#contact"
               className="mt-6 inline-flex w-full justify-center rounded-full bg-gradient-gold px-5 py-3 text-center font-inter text-xs font-bold uppercase tracking-[0.12em] text-white shadow-lg shadow-gold/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-gold/30"
             >
-              Get in touch
+              {t('footer.contact')}
             </a>
           </div>
         </div>
 
         <div className="flex flex-col gap-3 py-5 text-center font-inter text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between sm:text-left">
-          <p>© {currentYear} Solace-Foto. All rights reserved.</p>
-          <p>Photography for elegant, honest stories.</p>
+          <p>{t('footer.rights', { year: currentYear })}</p>
+          <p>{t('footer.tagline')}</p>
         </div>
       </div>
     </footer>

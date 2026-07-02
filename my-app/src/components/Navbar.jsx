@@ -1,13 +1,25 @@
 
 import { useEffect, useState } from 'react'
 import { FaBars, FaCamera, FaTimes } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 import { navLinks } from '../assets/asset'
 
 const Navbar = () => {
+  const { i18n, t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
   const bookingHref = '#contact'
+  const currentLanguage = i18n.resolvedLanguage?.startsWith('pt') ? 'pt-BR' : 'en'
+
+  const getNavLabel = (href) => {
+    const key = href.replace('#', '')
+    return t(`nav.${key}`)
+  }
 
   const closeMenu = () => setIsOpen(false)
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language)
+    closeMenu()
+  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -40,13 +52,13 @@ const Navbar = () => {
             href='#home'
             onClick={closeMenu}
             className='flex min-w-0 flex-1 items-center gap-2 font-roboto font-bold text-gradient-gold xl:flex-none'
-            aria-label='Solace-Foto home'
+            aria-label={t('nav.homeLabel')}
           >
             <span className='flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full bg-gradient-gold text-xs text-white transition-colors duration-300 hover:bg-gradient-gold-hover min-[380px]:h-9 min-[380px]:w-9 min-[380px]:text-sm sm:h-10 sm:w-10 sm:text-base'>
               <FaCamera />
             </span>
             <span className='truncate text-base text-gradient-gold min-[360px]:text-xl sm:text-3xl'>
-              Solace-Foto
+              SoulAce-Foto
             </span>
           </a>
 
@@ -58,14 +70,34 @@ const Navbar = () => {
                 href={link.href}
                 className='nav-link relative font-inter text-sm font-semibold uppercase tracking-wide text-charcoal transition-colors duration-300 hover:text-rose'
               >
-                {link.id}
+                {getNavLabel(link.href)}
               </a>
             ))}
+            <div className='flex shrink-0 rounded-full border border-chamegane bg-cream p-1' aria-label={t('language.switchLabel')}>
+              {[
+                { code: 'en', label: 'EN', name: t('language.english') },
+                { code: 'pt-BR', label: 'PT-BR', name: t('language.portuguese') },
+              ].map((language) => (
+                <button
+                  key={language.code}
+                  type='button'
+                  onClick={() => changeLanguage(language.code)}
+                  aria-label={language.name}
+                  className={`rounded-full px-3 py-1.5 font-inter text-[0.65rem] font-bold uppercase tracking-wide transition-colors duration-300 ${
+                    currentLanguage === language.code
+                      ? 'bg-gradient-gold text-white shadow-sm shadow-gold/20'
+                      : 'text-charcoal/70 hover:text-gold'
+                  }`}
+                >
+                  {language.label}
+                </button>
+              ))}
+            </div>
             <a
               href={bookingHref}
               className='shrink-0 rounded-full bg-gradient-gold px-5 py-2.5 font-inter text-sm font-bold uppercase tracking-wide text-white shadow-md shadow-gold/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gold/40'
             >
-              Book a Session
+              {t('nav.book')}
             </a>
           </div>
 
@@ -74,7 +106,7 @@ const Navbar = () => {
             type='button'
             className='flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-transparent text-charcoal transition-colors duration-300 hover:border-chamegane hover:bg-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold min-[380px]:h-11 min-[380px]:w-11 xl:hidden'
             onClick={() => setIsOpen((open) => !open)}
-            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-label={isOpen ? t('nav.close') : t('nav.open')}
             aria-expanded={isOpen}
             aria-controls='mobile-navigation'
           >
@@ -97,15 +129,35 @@ const Navbar = () => {
                 onClick={closeMenu}
                 className='rounded-md px-3 py-3 text-center font-inter text-xs font-semibold uppercase tracking-wide text-charcoal transition-colors duration-300 hover:bg-cream hover:text-rose focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold min-[380px]:text-sm sm:px-4'
               >
-                {link.id}
+                {getNavLabel(link.href)}
               </a>
             ))}
+            <div className='flex justify-center rounded-md border border-chamegane bg-cream p-1 sm:col-span-2 md:col-span-3' aria-label={t('language.switchLabel')}>
+              {[
+                { code: 'en', label: 'EN', name: t('language.english') },
+                { code: 'pt-BR', label: 'PT-BR', name: t('language.portuguese') },
+              ].map((language) => (
+                <button
+                  key={language.code}
+                  type='button'
+                  onClick={() => changeLanguage(language.code)}
+                  aria-label={language.name}
+                  className={`min-w-20 rounded-md px-3 py-2 font-inter text-xs font-bold uppercase tracking-wide transition-colors duration-300 ${
+                    currentLanguage === language.code
+                      ? 'bg-gradient-gold text-white shadow-sm shadow-gold/20'
+                      : 'text-charcoal/70 hover:text-gold'
+                  }`}
+                >
+                  {language.label}
+                </button>
+              ))}
+            </div>
             <a
               href={bookingHref}
               onClick={closeMenu}
               className='rounded-md bg-gradient-gold px-3 py-3 text-center font-inter text-xs font-bold uppercase tracking-wide text-white shadow-md shadow-gold/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gold/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal min-[380px]:text-sm sm:col-span-2 sm:px-4 md:col-span-3'
             >
-              Book a Session
+              {t('nav.book')}
             </a>
           </div>
         </div>
