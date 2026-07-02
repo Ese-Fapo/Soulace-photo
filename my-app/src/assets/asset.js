@@ -1,7 +1,19 @@
+import baby1 from './image/baby1.jpg'
+import baby2 from './image/baby2.jpg'
+import baby3 from './image/baby3.jpg'
+import baby4 from './image/baby4.jpg'
+import baby5 from './image/baby5.jpg'
+import baby6 from './image/baby6.jpg'
+import baby7 from './image/baby7.jpg'
+import baby8 from './image/baby8.jpg'
+import baby9 from './image/baby9.jpg'
+import babybum from './image/babybum.jpg'
+import braid1 from './image/braid-1.jpg'
 import bride from './image/bride.jpg'
 import coupleKiss from './image/couple-kiss.jpg'
 import coupleWithTrains from './image/couple-with-trains.webp'
 import couple from './image/couple.jpeg'
+import coupleJpg from './image/couple.jpg'
 import event01 from './image/event-01.webp'
 import event2 from './image/event-2.jpg'
 import event3 from './image/event-3.jpg'
@@ -12,10 +24,19 @@ import fashion from './image/fashion.jpg'
 import kidPotraite from './image/kid-potraite.jpg'
 import littleBrideGroom from './image/little-bride&groom.jpeg'
 import littleGirl from './image/littlebriade.jpeg'
+import model from './image/model.jpg'
+import model2 from './image/model2.jpg'
+import model3 from './image/model3.jpg'
+import model4 from './image/model4.jpg'
+import model6 from './image/model6.jpg'
+import portrait from './image/portrait.jpg'
 import portraitMale from './image/portrait-male.avif'
+import portait from './image/portait.jpg'
 import potrait001 from './image/potrait-001.jpg'
 import potrait002 from './image/potrait-002.jpg'
+import potraitGuy from './image/potrait.guy.jpg'
 import potraitMale from './image/potrait-male.avif'
+import pregnantChild from './image/pregnant-child.jpg'
 import productPhoto2 from './image/product-photo-2.avif'
 import productPhoto from './image/product-photo.jpg'
 import product from './image/product.jpeg'
@@ -27,13 +48,27 @@ import realestate from './image/realestate.jpg'
 import receptionFood from './image/reception-food.jpeg'
 import reception from './image/reception.jpeg'
 import receptionJpg from './image/reception.jpg'
+import weddingCouple from './image/wedding couple.jpg'
 import weddingFood from './image/wedding-food.jpeg'
+import weddingLadies from './image/wedding-ladies.jpg'
 
 const images = {
+  baby1,
+  baby2,
+  baby3,
+  baby4,
+  baby5,
+  baby6,
+  baby7,
+  baby8,
+  baby9,
+  babybum,
+  braid1,
   bride,
   coupleKiss,
   coupleWithTrains,
   couple,
+  coupleJpg,
   event01,
   event2,
   event3,
@@ -44,10 +79,19 @@ const images = {
   kidPotraite,
   littleBrideGroom,
   littleGirl,
+  model,
+  model2,
+  model3,
+  model4,
+  model6,
+  portrait,
   portraitMale,
+  portait,
   potrait001,
   potrait002,
+  potraitGuy,
   potraitMale,
+  pregnantChild,
   product,
   productPhoto,
   productPhoto2,
@@ -59,7 +103,9 @@ const images = {
   receptionFood,
   reception,
   receptionJpg,
+  weddingCouple,
   weddingFood,
+  weddingLadies,
 }
 import {
     FaCamera,
@@ -183,7 +229,7 @@ export const stats =[
 export const portfolioCategories = [
     {
         name: 'People & Events',
-        items: ['Weddings', 'Portraits', 'Events', 'Fashion']
+        items: ['Weddings', 'Portraits', 'Maternity & Babies', 'Events', 'Fashion']
     },
     {
         name: 'Business & Commercial',
@@ -231,6 +277,34 @@ export const portfolioItems = [
         category: 'Weddings',
         mainCategory: 'People & Events',
         image: images.littleBrideGroom,
+    },
+    {
+        id: 50,
+        title: 'Bride Detail',
+        category: 'Weddings',
+        mainCategory: 'People & Events',
+        image: images.braid1,
+    },
+    {
+        id: 51,
+        title: 'Wedding Couple',
+        category: 'Weddings',
+        mainCategory: 'People & Events',
+        image: images.weddingCouple,
+    },
+    {
+        id: 52,
+        title: 'Wedding Party Portrait',
+        category: 'Weddings',
+        mainCategory: 'People & Events',
+        image: images.weddingLadies,
+    },
+    {
+        id: 53,
+        title: 'Couple Wedding Portrait',
+        category: 'Weddings',
+        mainCategory: 'People & Events',
+        image: images.coupleJpg,
     },
     // People & Events - Portraits
     {
@@ -281,6 +355,105 @@ export const portfolioItems = [
         category: 'Portraits',
         mainCategory: 'People & Events',
         image: images.portraitMale,
+    },
+    {
+        id: 31,
+        title: 'Classic Portrait',
+        category: 'Portraits',
+        mainCategory: 'People & Events',
+        image: images.portrait,
+    },
+    {
+        id: 32,
+        title: 'Outdoor Portrait',
+        category: 'Portraits',
+        mainCategory: 'People & Events',
+        image: images.portait,
+    },
+    {
+        id: 33,
+        title: 'Contemporary Male Portrait',
+        category: 'Portraits',
+        mainCategory: 'People & Events',
+        image: images.potraitGuy,
+    },
+    {
+        id: 34,
+        title: 'Maternity Portrait',
+        category: 'Maternity & Babies',
+        mainCategory: 'People & Events',
+        image: images.pregnantChild,
+    },
+    // People & Events - Maternity & Babies
+    {
+        id: 40,
+        title: 'Maternity Glow',
+        category: 'Maternity & Babies',
+        mainCategory: 'People & Events',
+        image: images.babybum,
+    },
+    {
+        id: 41,
+        title: 'Newborn Portrait',
+        category: 'Maternity & Babies',
+        mainCategory: 'People & Events',
+        image: images.baby1,
+    },
+    {
+        id: 42,
+        title: 'Baby Milestone',
+        category: 'Maternity & Babies',
+        mainCategory: 'People & Events',
+        image: images.baby2,
+    },
+    {
+        id: 43,
+        title: 'Baby Studio Portrait',
+        category: 'Maternity & Babies',
+        mainCategory: 'People & Events',
+        image: images.baby3,
+    },
+    {
+        id: 44,
+        title: 'Little One Portrait',
+        category: 'Maternity & Babies',
+        mainCategory: 'People & Events',
+        image: images.baby4,
+    },
+    {
+        id: 45,
+        title: 'Baby Detail',
+        category: 'Maternity & Babies',
+        mainCategory: 'People & Events',
+        image: images.baby5,
+    },
+    {
+        id: 46,
+        title: 'Sweet Baby Moment',
+        category: 'Maternity & Babies',
+        mainCategory: 'People & Events',
+        image: images.baby6,
+    },
+    {
+        id: 47,
+        title: 'Baby Session',
+        category: 'Maternity & Babies',
+        mainCategory: 'People & Events',
+        image: images.baby7,
+    },
+    {
+        id: 48,
+        title: 'Tiny Portrait',
+        category: 'Maternity & Babies',
+        mainCategory: 'People & Events',
+        image: images.baby8,
+    },
+    {
+        id: 49,
+        title: 'Baby Keepsake',
+        category: 'Maternity & Babies',
+        mainCategory: 'People & Events',
+        image: images.baby9,
     },
     // People & Events - Events
     {
@@ -339,6 +512,41 @@ export const portfolioItems = [
         category: 'Fashion',
         mainCategory: 'People & Events',
         image: images.fashion2,
+    },
+    {
+        id: 35,
+        title: 'Model Fashion Portrait',
+        category: 'Fashion',
+        mainCategory: 'People & Events',
+        image: images.model,
+    },
+    {
+        id: 36,
+        title: 'Model Editorial Look',
+        category: 'Fashion',
+        mainCategory: 'People & Events',
+        image: images.model2,
+    },
+    {
+        id: 37,
+        title: 'Studio Model Session',
+        category: 'Fashion',
+        mainCategory: 'People & Events',
+        image: images.model3,
+    },
+    {
+        id: 38,
+        title: 'Fashion Model Profile',
+        category: 'Fashion',
+        mainCategory: 'People & Events',
+        image: images.model4,
+    },
+    {
+        id: 39,
+        title: 'Model Portfolio Image',
+        category: 'Fashion',
+        mainCategory: 'People & Events',
+        image: images.model6,
     },
     // Business & Commercial - Product Photography
     {

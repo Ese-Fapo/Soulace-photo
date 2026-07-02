@@ -5,6 +5,7 @@ const categoryCards = [
   { labelKey: 'categories.all', value: 'all', imageId: 17 },
   { labelKey: 'categories.weddings', value: 'Weddings', imageId: 3 },
   { labelKey: 'categories.portraits', value: 'Portraits', imageId: 9 },
+  { labelKey: 'categories.maternityBabies', value: 'Maternity & Babies', imageId: 40 },
   { labelKey: 'categories.events', value: 'Events', imageId: 15 },
   { labelKey: 'categories.fashion', value: 'Fashion', imageId: 19 },
   { labelKey: 'categories.products', value: 'Product Photography', imageId: 21 },
