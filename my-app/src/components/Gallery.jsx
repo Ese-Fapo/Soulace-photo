@@ -14,18 +14,6 @@ const filters = [
   { labelKey: 'categories.realEstate', value: 'Real Estate Photography' },
 ]
 
-const categoryLabelKeys = {
-  all: 'categories.all',
-  Weddings: 'categories.weddings',
-  Portraits: 'categories.portraits',
-  'Maternity & Babies': 'categories.maternityBabies',
-  Events: 'categories.events',
-  Fashion: 'categories.fashion',
-  'Product Photography': 'categories.productPhotography',
-  'Food Photography': 'categories.foodPhotography',
-  'Real Estate Photography': 'categories.realEstatePhotography',
-}
-
 const getFilterFromRoute = (route) => {
   const query = route.split('?')[1] ?? ''
   const category = new URLSearchParams(query).get('category') ?? 'all'
@@ -124,12 +112,6 @@ const Gallery = ({ route }) => {
                 alt={t(`portfolio.items.${item.id}`)}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#17090d]/90 via-[#17090d]/10 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-100"></div>
-              <div className="absolute inset-x-0 bottom-0 p-4">
-                <p className="font-inter text-[0.65rem] font-bold uppercase tracking-[0.16em] text-[#f2b8a0]">
-                  {t(categoryLabelKeys[item.category])}
-                </p>
-              </div>
             </article>
           ))}
         </div>

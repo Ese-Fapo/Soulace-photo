@@ -14,6 +14,7 @@ import coupleKiss from './image/couple-kiss.jpg'
 import coupleWithTrains from './image/couple-with-trains.webp'
 import couple from './image/couple.jpeg'
 import coupleJpg from './image/couple.jpg'
+import event from './image/event.jpg'
 import event01 from './image/event-01.webp'
 import event2 from './image/event-2.jpg'
 import event3 from './image/event-3.jpg'
@@ -69,6 +70,7 @@ const images = {
   coupleWithTrains,
   couple,
   coupleJpg,
+  event,
   event01,
   event2,
   event3,
@@ -497,6 +499,13 @@ export const portfolioItems = [
         category: 'Events',
         mainCategory: 'People & Events',
         image: images.receptionJpg,
+    },
+    {
+        id: 54,
+        title: 'Event Moment',
+        category: 'Events',
+        mainCategory: 'People & Events',
+        image: images.event,
     },
     // People & Events - Fashion
     {
