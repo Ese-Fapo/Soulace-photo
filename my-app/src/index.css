@@ -81,7 +81,39 @@ svg {
     opacity: 1;
   }
 }
+@keyframes testimonialSlideNext {
+  from {
+    transform: translateX(18px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes testimonialSlidePrevious {
+  from {
+    transform: translateX(-18px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 /* custom classes */
+.testimonial-slide-next {
+  animation: testimonialSlideNext 420ms ease both;
+}
+.testimonial-slide-previous {
+  animation: testimonialSlidePrevious 420ms ease both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-slide-next,
+  .testimonial-slide-previous {
+    animation: none;
+  }
+}
 .text-gradient-gold{
   background: linear-gradient(135deg, #6E1423 0%, #B91F3A 48%, #F2B8A0 100%);
   -webkit-background-clip: text;

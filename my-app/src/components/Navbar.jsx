@@ -9,6 +9,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const bookingHref = '#contact'
   const currentLanguage = i18n.resolvedLanguage?.startsWith('pt') ? 'pt-BR' : 'en'
+  const languages = [
+    { code: 'en', label: 'EN', name: t('language.english') },
+    { code: 'pt-BR', label: 'PT', name: t('language.portuguese') },
+  ]
 
   const getNavLabel = (href) => {
     const key = href.replace('#', '')
@@ -74,10 +78,7 @@ const Navbar = () => {
               </a>
             ))}
             <div className='flex shrink-0 rounded-full border border-chamegane bg-cream p-1' aria-label={t('language.switchLabel')}>
-              {[
-                { code: 'en', label: 'EN', name: t('language.english') },
-                { code: 'pt-BR', label: 'PT-BR', name: t('language.portuguese') },
-              ].map((language) => (
+              {languages.map((language) => (
                 <button
                   key={language.code}
                   type='button'
@@ -89,7 +90,7 @@ const Navbar = () => {
                       : 'text-charcoal/70 hover:text-gold'
                   }`}
                 >
-                  {language.label}
+                  {language.code === 'pt-BR' ? 'PT-BR' : language.label}
                 </button>
               ))}
             </div>
@@ -101,17 +102,37 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            type='button'
-            className='flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-transparent text-charcoal transition-colors duration-300 hover:border-chamegane hover:bg-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold min-[380px]:h-11 min-[380px]:w-11 xl:hidden'
-            onClick={() => setIsOpen((open) => !open)}
-            aria-label={isOpen ? t('nav.close') : t('nav.open')}
-            aria-expanded={isOpen}
-            aria-controls='mobile-navigation'
-          >
-            {isOpen ? <FaTimes className='text-lg' /> : <FaBars className='text-lg' />}
-          </button>
+          <div className='flex shrink-0 items-center gap-1.5 xl:hidden min-[380px]:gap-2'>
+            <div className='flex rounded-full border border-chamegane bg-cream p-0.5' aria-label={t('language.switchLabel')}>
+              {languages.map((language) => (
+                <button
+                  key={language.code}
+                  type='button'
+                  onClick={() => changeLanguage(language.code)}
+                  aria-label={language.name}
+                  className={`rounded-full px-2 py-1 font-inter text-[0.58rem] font-bold uppercase tracking-wide transition-colors duration-300 min-[380px]:px-2.5 min-[380px]:text-[0.65rem] ${
+                    currentLanguage === language.code
+                      ? 'bg-gradient-gold text-white shadow-sm shadow-gold/20'
+                      : 'text-charcoal/70 hover:text-gold'
+                  }`}
+                >
+                  {language.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              type='button'
+              className='flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-transparent text-charcoal transition-colors duration-300 hover:border-chamegane hover:bg-cream focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold min-[380px]:h-11 min-[380px]:w-11'
+              onClick={() => setIsOpen((open) => !open)}
+              aria-label={isOpen ? t('nav.close') : t('nav.open')}
+              aria-expanded={isOpen}
+              aria-controls='mobile-navigation'
+            >
+              {isOpen ? <FaTimes className='text-lg' /> : <FaBars className='text-lg' />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -132,26 +153,6 @@ const Navbar = () => {
                 {getNavLabel(link.href)}
               </a>
             ))}
-            <div className='flex justify-center rounded-md border border-chamegane bg-cream p-1 sm:col-span-2 md:col-span-3' aria-label={t('language.switchLabel')}>
-              {[
-                { code: 'en', label: 'EN', name: t('language.english') },
-                { code: 'pt-BR', label: 'PT-BR', name: t('language.portuguese') },
-              ].map((language) => (
-                <button
-                  key={language.code}
-                  type='button'
-                  onClick={() => changeLanguage(language.code)}
-                  aria-label={language.name}
-                  className={`min-w-20 rounded-md px-3 py-2 font-inter text-xs font-bold uppercase tracking-wide transition-colors duration-300 ${
-                    currentLanguage === language.code
-                      ? 'bg-gradient-gold text-white shadow-sm shadow-gold/20'
-                      : 'text-charcoal/70 hover:text-gold'
-                  }`}
-                >
-                  {language.label}
-                </button>
-              ))}
-            </div>
             <a
               href={bookingHref}
               onClick={closeMenu}

@@ -296,43 +296,94 @@ const resources = {
       testimonials: {
         eyebrow: 'Google reviews',
         title: 'What our clients say',
-        based: 'Based on recent Google-style client reviews.',
+        based: 'Based on recent Google client reviews.',
+        previous: 'Previous testimonial',
+        next: 'Next testimonial',
+        goTo: 'Go to testimonial {{number}}',
         reviews: {
           1: {
             role: 'Bride',
             date: 'May 2026',
+            location: 'Florianopolis, Brazil',
             quote:
               'The team captured every emotional part of our wedding with so much care. The photos feel elegant, natural, and completely us.',
           },
           2: {
             role: 'Business owner',
             date: 'April 2026',
+            location: 'Florianopolis, Brazil',
             quote:
               'Excellent work at our corporate event. Communication was clear, the delivery was fast, and the final gallery looked very professional.',
           },
           3: {
             role: 'Mother',
             date: 'March 2026',
+            location: 'Campinas, Brazil',
             quote:
               'Our family portraits came out beautiful. Everyone felt comfortable, and the photos captured real smiles instead of stiff poses.',
           },
           4: {
             role: 'Restaurant owner',
             date: 'February 2026',
+            location: 'Sao Paulo, Brazil',
             quote:
               'The food photos made our menu look premium. We started using them online immediately and noticed more customer interest.',
           },
           5: {
             role: 'Bride',
             date: 'January 2026',
+            location: 'Rio de Janeiro, Brazil',
             quote:
               'We loved every image. The gallery felt refined and emotional, and it made our day feel even more special when we saw it again.',
           },
           6: {
             role: 'Real estate broker',
             date: 'December 2025',
+            location: 'Sao Paulo, Brazil',
             quote:
               'The property photos looked bright and spacious. They helped us present the listing with much more confidence.',
+          },
+          7: {
+            role: 'Bride',
+            date: 'June 2026',
+            location: 'Lagos, Nigeria',
+            quote:
+              'Our wedding photos were full of joy, color, and real emotion. The team made everyone feel relaxed and captured the celebration beautifully.',
+          },
+          8: {
+            role: 'Event planner',
+            date: 'May 2026',
+            location: 'Abuja, Nigeria',
+            quote:
+              'The event coverage was sharp and elegant. Every important guest moment, detail, and reaction was documented with care.',
+          },
+          9: {
+            role: 'Fashion designer',
+            date: 'April 2026',
+            location: 'Lagos, Nigeria',
+            quote:
+              'The fashion images looked premium and editorial. They understood the collection quickly and gave us photos we could use everywhere.',
+          },
+          10: {
+            role: 'Restaurant owner',
+            date: 'March 2026',
+            location: 'Port Harcourt, Nigeria',
+            quote:
+              'Our menu finally looks as good online as it tastes in person. The food photos are clean, appetizing, and very professional.',
+          },
+          11: {
+            role: 'Mother',
+            date: 'February 2026',
+            location: 'Enugu, Nigeria',
+            quote:
+              'The family portraits are warm and natural. The children were comfortable, and the final gallery feels personal and timeless.',
+          },
+          12: {
+            role: 'Property consultant',
+            date: 'January 2026',
+            location: 'Lekki, Nigeria',
+            quote:
+              'The property photos helped our listing stand out immediately. The rooms looked bright, spacious, and easy for buyers to imagine.',
           },
         },
       },
@@ -645,7 +696,7 @@ const resources = {
       testimonials: {
         eyebrow: 'Avaliações do Google',
         title: 'O que nossos clientes dizem',
-        based: 'Com base em avaliações recentes de clientes no estilo Google.',
+        based: 'Com base em avaliações recentes de clientes no Google.',
         reviews: {
           1: {
             role: 'Noiva',

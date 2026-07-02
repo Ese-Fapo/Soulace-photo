@@ -3,8 +3,8 @@ import { portfolioItems } from '../assets/asset'
 
 const categoryCards = [
   { labelKey: 'categories.all', value: 'all', imageId: 17 },
-  { labelKey: 'categories.weddings', value: 'Weddings', imageId: 1 },
-  { labelKey: 'categories.portraits', value: 'Portraits', imageId: 7 },
+  { labelKey: 'categories.weddings', value: 'Weddings', imageId: 3 },
+  { labelKey: 'categories.portraits', value: 'Portraits', imageId: 9 },
   { labelKey: 'categories.events', value: 'Events', imageId: 15 },
   { labelKey: 'categories.fashion', value: 'Fashion', imageId: 19 },
   { labelKey: 'categories.products', value: 'Product Photography', imageId: 21 },
@@ -50,9 +50,6 @@ const Portfolio = () => {
         >
           {categoryCards.map((category, index) => {
             const imageItem = portfolioItems.find((item) => item.id === category.imageId) ?? portfolioItems[0]
-            const total = category.value === 'all'
-              ? portfolioItems.length
-              : portfolioItems.filter((item) => item.category === category.value).length
 
             return (
               <article
@@ -70,10 +67,7 @@ const Portfolio = () => {
                     alt={t(category.labelKey)}
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#17090d]/82 via-[#17090d]/12 to-transparent"></div>
-                  <span className="absolute bottom-3 left-3 max-w-[calc(100%-1.5rem)] rounded-full border border-[#f2b8a0]/40 bg-white/10 px-3 py-1 font-inter text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[#f8ece7] backdrop-blur-md sm:bottom-4 sm:left-4">
-                    {t('portfolio.photoCount', { count: total })}
-                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#17090d]/62 via-[#17090d]/8 to-transparent"></div>
                 </a>
 
                 <div className="flex flex-1 flex-col p-5">

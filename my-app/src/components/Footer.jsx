@@ -8,6 +8,8 @@ const socialBrandClasses = {
   WhatsApp: 'bg-[#25D366] text-white hover:shadow-[#25D366]/30',
 }
 
+const isGalleryLink = (href) => href.startsWith('#gallery')
+
 const Footer = () => {
   const { t } = useTranslation()
   const phone = contactInfo.find((item) => item.href.startsWith('tel:'))
@@ -42,6 +44,8 @@ const Footer = () => {
                   <a
                     key={link.id}
                     href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
                     aria-label={link.label}
                     className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-white shadow-lg shadow-black/15 transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:shadow-xl ${socialBrandClasses[link.label] ?? 'bg-white/[0.06] hover:bg-gradient-gold'}`}
                   >
@@ -78,6 +82,7 @@ const Footer = () => {
                 <a
                   key={link.id}
                   href={link.href}
+                  onClick={isGalleryLink(link.href) ? () => window.scrollTo({ top: 0, behavior: 'smooth' }) : undefined}
                   className="w-fit max-w-full break-words font-inter text-sm text-white/72 transition-colors duration-300 hover:text-[#f2b8a0]"
                 >
                   {t(`services.links.${index}`)}

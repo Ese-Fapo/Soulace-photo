@@ -82,7 +82,6 @@ export const navLinks = [
     { id: 'About', href: '#about' },
     { id: 'Portfolio', href: '#portfolio' },
      { id: 'Services', href: '#services' },
-      { id: 'packages', href: '#packages' },
     { id: 'Contact', href: '#contact' },
 ]
 
@@ -120,12 +119,12 @@ export const contactInfo = [
 ];
 
 export const serviceLinks = [
-    { id: 1, label: "Casamentos", href: "#services" },
-    { id: 2, label: "Retratos", href: "#services" },
-    { id: 3, label: "Eventos", href: "#services" },
-    { id: 4, label: "Fotografia de produto", href: "#services" },
-    { id: 5, label: "Fotografia gastronômica", href: "#services" },
-    { id: 6, label: "Fotografia imobiliária", href: "#services" },
+    { id: 1, label: "Casamentos", href: "#gallery?category=Weddings" },
+    { id: 2, label: "Retratos", href: "#gallery?category=Portraits" },
+    { id: 3, label: "Eventos", href: "#gallery?category=Events" },
+    { id: 4, label: "Fotografia de produto", href: "#gallery?category=Product%20Photography" },
+    { id: 5, label: "Fotografia gastronômica", href: "#gallery?category=Food%20Photography" },
+    { id: 6, label: "Fotografia imobiliária", href: "#gallery?category=Real%20Estate%20Photography" },
 ];
 
 export const serviceLink = serviceLinks;
@@ -164,7 +163,6 @@ export const quickLinks = [
     { id: 2, label: "Sobre", href: "#about" },
     { id: 3, label: "Portfólio", href: "#portfolio" },
     { id: 4, label: "Serviços", href: "#services" },
-    { id: 5, label: "Preços", href: "#packages" },
     { id: 6, label: "Contato", href: "#contact" },
 ];
 

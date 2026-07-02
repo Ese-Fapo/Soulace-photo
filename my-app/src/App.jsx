@@ -35,7 +35,24 @@ const App = () => {
   useEffect(() => {
     if (route.startsWith('#gallery')) {
       window.scrollTo({ top: 0, behavior: 'smooth' })
+      return undefined
     }
+
+    const targetId = route.replace('#', '').split('?')[0]
+
+    if (!targetId) {
+      return undefined
+    }
+
+    const scrollTimer = window.setTimeout(() => {
+      const target = document.getElementById(targetId)
+
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }, 0)
+
+    return () => window.clearTimeout(scrollTimer)
   }, [route])
 
   if (route.startsWith('#gallery')) {

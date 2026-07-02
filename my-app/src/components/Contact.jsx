@@ -7,6 +7,8 @@ const socialBrandClasses = {
   WhatsApp: 'bg-[#25D366] hover:shadow-[#25D366]/30',
 }
 
+const isExternalLink = (href) => href.startsWith('http')
+
 const Contact = () => {
   return (
     <section id="contact" className="w-full max-w-full overflow-x-clip bg-cream px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
@@ -18,6 +20,8 @@ const Contact = () => {
           <a
             key={item.id}
             href={item.href}
+            target={isExternalLink(item.href) ? '_blank' : undefined}
+            rel={isExternalLink(item.href) ? 'noreferrer' : undefined}
             className="flex min-w-0 max-w-full items-center gap-3 rounded-lg bg-white p-4 font-inter text-sm text-charcoal shadow-sm transition-transform duration-300 hover:-translate-y-0.5 sm:min-h-20"
           >
             <Icon className="shrink-0 text-base text-gold sm:text-lg" />
@@ -35,6 +39,8 @@ const Contact = () => {
           <a
             key={item.id}
             href={item.href}
+            target="_blank"
+            rel="noreferrer"
             aria-label={item.label}
             className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-white shadow-lg shadow-charcoal/15 transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:shadow-xl sm:h-12 sm:w-12 ${socialBrandClasses[item.label] ?? 'bg-charcoal hover:bg-rose'}`}
           >
