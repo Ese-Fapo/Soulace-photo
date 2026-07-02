@@ -456,8 +456,10 @@ const resources = {
         contact: 'Get in touch',
         rights: '© {{year}} SoulAce-Foto. All rights reserved.',
         tagline: 'Photography for elegant, honest stories.',
+        credit: 'Website by',
       },
       contact: {
+        instagram: 'Open Instagram',
         whatsapp: 'Chat on WhatsApp',
       },
     },
@@ -864,8 +866,10 @@ const resources = {
         contact: 'Entrar em contato',
         rights: '© {{year}} SoulAce-Foto. Todos os direitos reservados.',
         tagline: 'Fotografia para histórias elegantes e verdadeiras.',
+        credit: 'Site criado por',
       },
       contact: {
+        instagram: 'Abrir Instagram',
         whatsapp: 'Conversar no WhatsApp',
       },
     },

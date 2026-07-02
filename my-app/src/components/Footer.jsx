@@ -123,7 +123,17 @@ const Footer = () => {
 
         <div className="flex flex-col gap-3 py-5 text-center font-inter text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between sm:text-left">
           <p>{t('footer.rights', { year: currentYear })}</p>
-          <p>{t('footer.tagline')}</p>
+          <p>
+            {t('footer.credit')}{' '}
+            <a
+              href="https://sitesprofissionai.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-[#f2b8a0] transition-colors duration-300 hover:text-white"
+            >
+              Sites Profissionais
+            </a>
+          </p>
         </div>
       </div>
     </footer>

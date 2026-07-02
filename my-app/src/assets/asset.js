@@ -88,6 +88,9 @@ export const navLinks = [
 
 export const navLink = navLinks;
 
+export const whatsappMessage = encodeURIComponent("Hello SoulAce-Foto, I would like to book a photography session.")
+export const whatsappHref = `https://wa.me/2349025246915?text=${whatsappMessage}`
+
 export const contactInfo = [
     {
         id: 1,
@@ -108,7 +111,7 @@ export const contactInfo = [
         icon: FaWhatsapp,
         label: "WhatsApp",
         value: "+234 902 524 6915",
-        href: "https://wa.me/2349025246915"
+        href: whatsappHref
     },
     {
         id: 4,
@@ -153,7 +156,7 @@ export const socialLinks = [
         id: 4,
         icon: FaWhatsapp,
         label: "WhatsApp",
-        href: "https://wa.me/2349025246915"
+        href: whatsappHref
     }
 ];
 
