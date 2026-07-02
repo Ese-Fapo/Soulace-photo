@@ -101,7 +101,7 @@ const Stats = () => {
             <strong className="block font-roboto text-4xl font-black leading-none text-gradient-gold sm:text-5xl">
               <CountUpNumber value={item.number} />
             </strong>
-            <span className="mx-auto mt-3 block max-w-[10rem] break-words font-inter text-[0.7rem] font-bold uppercase tracking-[0.18em] text-[#f8ece7]/78 min-[380px]:text-xs">
+            <span className="mx-auto mt-3 block max-w-[12rem] break-words font-inter text-[0.68rem] font-bold uppercase tracking-[0.12em] text-[#f8ece7]/78 min-[380px]:text-xs sm:tracking-[0.16em]">
               {t(`stats.items.${index}.title`)}
             </span>
           </article>

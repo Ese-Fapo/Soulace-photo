@@ -56,7 +56,7 @@ const Gallery = ({ route }) => {
     : `portfolio.categoryCards.${filter}.galleryIntro`
 
   return (
-    <main className="min-h-screen w-full max-w-full overflow-x-clip bg-cream px-4 pb-12 pt-28 sm:px-6 sm:pb-16 lg:pb-20">
+    <main className="min-h-screen w-full max-w-full overflow-x-clip bg-cream px-4 pb-12 pt-24 sm:px-6 sm:pb-16 sm:pt-28 lg:pb-20">
       <section className="mx-auto w-full max-w-7xl">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="min-w-0">
@@ -66,7 +66,7 @@ const Gallery = ({ route }) => {
             >
               {t('gallery.back')}
             </a>
-            <h1 className="mt-4 break-words font-roboto text-4xl font-black leading-tight text-charcoal sm:text-5xl">
+            <h1 className="mt-4 break-words font-roboto text-3xl font-black leading-tight text-charcoal min-[380px]:text-4xl sm:text-5xl">
               {filter === 'all' ? (
                 <>
                   {t('gallery.titleStart')} <span className="text-gradient-gold">{t('gallery.titleHighlight')}</span>
@@ -99,7 +99,7 @@ const Gallery = ({ route }) => {
                   setFilter(item.value)
                   window.location.hash = getGalleryHref(item.value)
                 }}
-                className={`shrink-0 rounded-full border px-4 py-2 font-inter text-[0.68rem] font-bold uppercase tracking-[0.12em] transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold min-[380px]:text-xs sm:px-5 ${
+                className={`shrink-0 rounded-full border px-4 py-2 font-inter text-[0.68rem] font-bold uppercase tracking-[0.1em] transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold min-[380px]:text-xs sm:px-5 ${
                   isActive
                     ? 'border-transparent bg-gradient-gold text-white shadow-lg shadow-gold/25'
                     : 'border-chamegane bg-white text-charcoal/75 hover:-translate-y-0.5 hover:border-gold hover:text-gold'

@@ -26,7 +26,7 @@ const Footer = () => {
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-gold font-roboto text-sm font-black text-white shadow-lg shadow-gold/25">
                 SF
               </span>
-              <span className="min-w-0 break-words font-roboto text-2xl font-black text-gradient-gold">
+              <span className="min-w-0 break-words font-roboto text-xl font-black text-gradient-gold sm:text-2xl">
                 SoulAce-Foto
               </span>
             </a>
@@ -109,7 +109,7 @@ const Footer = () => {
 
             <a
               href="#contact"
-              className="mt-6 inline-flex w-full justify-center rounded-full bg-gradient-gold px-5 py-3 text-center font-inter text-xs font-bold uppercase tracking-[0.12em] text-white shadow-lg shadow-gold/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-gold/30"
+              className="mt-6 inline-flex w-full justify-center rounded-full bg-gradient-gold px-5 py-3 text-center font-inter text-xs font-bold uppercase tracking-[0.1em] text-white shadow-lg shadow-gold/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-gold/30"
             >
               {t('footer.contact')}
             </a>

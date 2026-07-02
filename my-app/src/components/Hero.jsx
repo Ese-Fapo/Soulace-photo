@@ -23,10 +23,10 @@ const Hero = () => {
           <div className="min-w-0 text-center lg:text-left">
             <div
               data-aos="fade-up"
-              className="mx-auto flex w-fit max-w-full items-center gap-3 border-y border-[#f2b8a0]/35 px-3 py-2 lg:mx-0"
+              className="mx-auto flex w-fit max-w-full items-center gap-2 border-y border-[#f2b8a0]/35 px-3 py-2 lg:mx-0"
             >
               <span className="h-px w-6 shrink-0 bg-[#f2b8a0] min-[380px]:w-8"></span>
-              <p className="font-inter text-[0.63rem] font-bold uppercase tracking-[0.16em] text-[#f2b8a0] min-[380px]:text-xs sm:tracking-[0.24em]">
+              <p className="break-words font-inter text-[0.6rem] font-bold uppercase tracking-[0.12em] text-[#f2b8a0] min-[380px]:text-xs sm:tracking-[0.2em]">
                 {t('hero.eyebrow')}
               </p>
             </div>
@@ -34,7 +34,7 @@ const Hero = () => {
             <h1
               data-aos="fade-up"
               data-aos-delay="120"
-              className="mx-auto mt-6 max-w-5xl break-words font-roboto text-4xl font-black leading-[1.02] text-white min-[380px]:text-5xl sm:text-6xl md:text-7xl lg:mx-0 xl:text-8xl"
+              className="mx-auto mt-6 max-w-5xl break-words font-roboto text-[2.35rem] font-black leading-[1.04] text-white min-[380px]:text-5xl sm:text-6xl md:text-7xl lg:mx-0 xl:text-8xl"
             >
               {t('hero.titleStart')}
               <span className="block text-gradient-gold">{t('hero.titleEnd')}</span>
@@ -55,13 +55,13 @@ const Hero = () => {
             >
               <a
                 href="#contact"
-                className="w-full rounded-full bg-gradient-gold px-6 py-3.5 text-center font-inter text-xs font-bold uppercase tracking-[0.12em] text-white shadow-xl shadow-[#7b1324]/35 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-[#a51d35]/45 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2b8a0] min-[380px]:text-sm sm:w-auto sm:px-8"
+                className="w-full rounded-full bg-gradient-gold px-5 py-3.5 text-center font-inter text-xs font-bold uppercase tracking-[0.1em] text-white shadow-xl shadow-[#7b1324]/35 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-[#a51d35]/45 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2b8a0] min-[380px]:text-sm sm:w-auto sm:px-8"
               >
                 {t('hero.reserve')}
               </a>
               <a
                 href="#portfolio"
-                className="w-full rounded-full border border-[#f2b8a0]/60 px-6 py-3.5 text-center font-inter text-xs font-bold uppercase tracking-[0.12em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-[#f2b8a0] hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white min-[380px]:text-sm sm:w-auto sm:px-8"
+                className="w-full rounded-full border border-[#f2b8a0]/60 px-5 py-3.5 text-center font-inter text-xs font-bold uppercase tracking-[0.1em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-[#f2b8a0] hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white min-[380px]:text-sm sm:w-auto sm:px-8"
               >
                 {t('hero.gallery')}
               </a>

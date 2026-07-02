@@ -35,14 +35,14 @@ const About = () => {
           <p className="font-inter text-xs font-bold uppercase tracking-[0.22em] text-gold">
             {t('about.eyebrow')}
           </p>
-          <h2 className="mt-3 max-w-2xl break-words font-roboto text-4xl font-black leading-tight text-charcoal sm:text-5xl">
+          <h2 className="mt-3 max-w-2xl break-words font-roboto text-3xl font-black leading-tight text-charcoal min-[380px]:text-4xl sm:text-5xl">
             {t('about.title')}
           </h2>
           <p className="mt-5 max-w-2xl font-inter text-sm leading-7 text-charcoal/75 sm:text-base sm:leading-8">
             {t('about.description')}
           </p>
 
-          <div className="mt-7 grid grid-cols-1 gap-3 min-[460px]:grid-cols-3">
+          <div className="mt-7 grid grid-cols-1 gap-3 min-[520px]:grid-cols-3">
             {highlights.map((item, index) => (
               <article key={item.value} className="min-w-0 rounded-lg border border-chamegane bg-white px-4 py-4 text-center shadow-sm shadow-charcoal/5">
                 <strong className="block font-roboto text-3xl font-black leading-none text-gradient-gold">
@@ -72,13 +72,13 @@ const About = () => {
           <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
               href="#portfolio"
-              className="rounded-full bg-gradient-gold px-6 py-3 text-center font-inter text-xs font-bold uppercase tracking-[0.12em] text-white shadow-lg shadow-gold/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-gold/30"
+              className="rounded-full bg-gradient-gold px-6 py-3 text-center font-inter text-xs font-bold uppercase tracking-[0.1em] text-white shadow-lg shadow-gold/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-gold/30"
             >
               {t('about.viewWork')}
             </a>
             <a
               href="#contact"
-              className="rounded-full border border-gold px-6 py-3 text-center font-inter text-xs font-bold uppercase tracking-[0.12em] text-gold transition-all duration-300 hover:-translate-y-0.5 hover:bg-white"
+              className="rounded-full border border-gold px-6 py-3 text-center font-inter text-xs font-bold uppercase tracking-[0.1em] text-gold transition-all duration-300 hover:-translate-y-0.5 hover:bg-white"
             >
               {t('about.startSession')}
             </a>

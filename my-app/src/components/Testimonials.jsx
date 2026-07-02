@@ -58,13 +58,13 @@ const Testimonials = () => {
             <p className="font-inter text-xs font-bold uppercase tracking-[0.22em] text-gold">
               {t('testimonials.eyebrow')}
             </p>
-            <h2 className="mt-3 max-w-2xl break-words font-roboto text-4xl font-black leading-tight text-charcoal sm:text-5xl">
+            <h2 className="mt-3 max-w-2xl break-words font-roboto text-3xl font-black leading-tight text-charcoal min-[380px]:text-4xl sm:text-5xl">
             {t('testimonials.title')}
             </h2>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="100" className="rounded-lg border border-chamegane bg-cream p-5 shadow-sm shadow-charcoal/5">
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-col gap-3 min-[380px]:flex-row min-[380px]:items-center min-[380px]:flex-wrap">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white shadow-sm shadow-charcoal/10">
                 <FcGoogle className="text-3xl" />
               </span>

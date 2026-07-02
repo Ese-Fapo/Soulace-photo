@@ -57,18 +57,18 @@ const Navbar = () => {
             <span className='flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full bg-gradient-gold text-xs text-white transition-colors duration-300 hover:bg-gradient-gold-hover min-[380px]:h-9 min-[380px]:w-9 min-[380px]:text-sm sm:h-10 sm:w-10 sm:text-base'>
               <FaCamera />
             </span>
-            <span className='truncate text-base text-gradient-gold min-[360px]:text-xl sm:text-3xl'>
+            <span className='truncate text-base text-gradient-gold min-[360px]:text-lg sm:text-2xl lg:text-3xl'>
               SoulAce-Foto
             </span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className='hidden min-w-0 items-center gap-5 xl:flex 2xl:gap-6'>
+          <div className='hidden min-w-0 items-center gap-3 xl:flex 2xl:gap-5'>
             {navLinks.map((link) => (
               <a
                 key={link.id}
                 href={link.href}
-                className='nav-link relative font-inter text-sm font-semibold uppercase tracking-wide text-charcoal transition-colors duration-300 hover:text-rose'
+                className='nav-link relative whitespace-nowrap font-inter text-xs font-semibold uppercase tracking-wide text-charcoal transition-colors duration-300 hover:text-rose 2xl:text-sm'
               >
                 {getNavLabel(link.href)}
               </a>
@@ -95,7 +95,7 @@ const Navbar = () => {
             </div>
             <a
               href={bookingHref}
-              className='shrink-0 rounded-full bg-gradient-gold px-5 py-2.5 font-inter text-sm font-bold uppercase tracking-wide text-white shadow-md shadow-gold/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gold/40'
+              className='shrink-0 rounded-full bg-gradient-gold px-4 py-2.5 text-center font-inter text-xs font-bold uppercase tracking-wide text-white shadow-md shadow-gold/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gold/40 2xl:px-5 2xl:text-sm'
             >
               {t('nav.book')}
             </a>

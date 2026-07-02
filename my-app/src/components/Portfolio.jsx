@@ -30,7 +30,7 @@ const Portfolio = () => {
           <h2
             data-aos="fade-up"
             data-aos-delay="100"
-            className="mt-3 break-words font-roboto text-4xl font-black leading-tight text-charcoal sm:text-5xl"
+            className="mt-3 break-words font-roboto text-3xl font-black leading-tight text-charcoal min-[380px]:text-4xl sm:text-5xl"
           >
             {t('portfolio.titleStart')} <span className="text-gradient-gold">{t('portfolio.titleHighlight')}</span>
           </h2>
@@ -46,7 +46,7 @@ const Portfolio = () => {
         <div
           data-aos="fade-up"
           data-aos-delay="250"
-          className="mt-10 grid grid-cols-1 gap-4 min-[520px]:grid-cols-2 lg:grid-cols-4 xl:gap-5"
+          className="mt-10 grid grid-cols-1 gap-4 min-[520px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-5"
         >
           {categoryCards.map((category, index) => {
             const imageItem = portfolioItems.find((item) => item.id === category.imageId) ?? portfolioItems[0]
@@ -71,13 +71,13 @@ const Portfolio = () => {
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#17090d]/82 via-[#17090d]/12 to-transparent"></div>
-                  <span className="absolute bottom-4 left-4 rounded-full border border-[#f2b8a0]/40 bg-white/10 px-3 py-1 font-inter text-[0.62rem] font-bold uppercase tracking-[0.14em] text-[#f8ece7] backdrop-blur-md">
+                  <span className="absolute bottom-3 left-3 max-w-[calc(100%-1.5rem)] rounded-full border border-[#f2b8a0]/40 bg-white/10 px-3 py-1 font-inter text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[#f8ece7] backdrop-blur-md sm:bottom-4 sm:left-4">
                     {t('portfolio.photoCount', { count: total })}
                   </span>
                 </a>
 
                 <div className="flex flex-1 flex-col p-5">
-                  <h3 className="break-words font-roboto text-2xl font-black leading-tight text-charcoal">
+                  <h3 className="break-words font-roboto text-xl font-black leading-tight text-charcoal sm:text-2xl">
                     {t(category.labelKey)}
                   </h3>
                   <p className="mt-3 flex-1 break-words font-inter text-sm leading-6 text-charcoal/72">
@@ -85,7 +85,7 @@ const Portfolio = () => {
                   </p>
                   <a
                     href={getGalleryHref(category.value)}
-                    className="mt-5 inline-flex w-fit rounded-full bg-gradient-gold px-5 py-2.5 font-inter text-xs font-bold uppercase tracking-[0.12em] text-white shadow-lg shadow-gold/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-gold/30"
+                    className="mt-5 inline-flex w-full justify-center rounded-full bg-gradient-gold px-5 py-2.5 text-center font-inter text-xs font-bold uppercase tracking-[0.1em] text-white shadow-lg shadow-gold/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-gold/30 sm:w-fit"
                   >
                     {t('portfolio.viewMore')}
                   </a>
@@ -104,7 +104,7 @@ const Portfolio = () => {
           </p>
           <a
             href="#contact"
-            className="mt-5 inline-flex rounded-full bg-gradient-gold px-6 py-3 font-inter text-xs font-bold uppercase tracking-[0.12em] text-white shadow-lg shadow-gold/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-gold/30"
+            className="mt-5 inline-flex rounded-full bg-gradient-gold px-6 py-3 text-center font-inter text-xs font-bold uppercase tracking-[0.1em] text-white shadow-lg shadow-gold/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-gold/30"
           >
             {t('portfolio.ctaButton')}
           </a>
