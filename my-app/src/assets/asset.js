@@ -151,8 +151,8 @@ export const contactInfo = [
         id: 2,
         icon: FaEnvelope,
         label: "Email",
-        value: "contato@photostudio.com",
-        href: "mailto:contato@photostudio.com"
+        value: "soulaceimagery@gmail.com",
+        href: "mailto:soulaceimagery@gmail.com"
     },
     {
         id: 3,
