@@ -15,6 +15,7 @@ const resources = {
         about: 'About',
         portfolio: 'Portfolio',
         services: 'Services',
+        faqs: 'FAQs',
         packages: 'Packages',
         contact: 'Contact',
         book: 'Book a Session',
@@ -387,6 +388,64 @@ const resources = {
           },
         },
       },
+      faqs: {
+        eyebrow: 'Questions and answers',
+        title: 'Everything you may want to know before booking.',
+        description:
+          'Here are the details clients usually ask about before planning a wedding, portrait, event, or commercial photography session.',
+        items: [
+          {
+            question: 'How far in advance should I book a session?',
+            answer:
+              'For weddings and large events, booking 2 to 4 months ahead is ideal. Portrait, family, product, food, and real estate sessions can often be planned 1 to 3 weeks ahead, depending on availability.',
+          },
+          {
+            question: 'Do you help with location and timing?',
+            answer:
+              'Yes. We recommend locations that fit the mood of the shoot and suggest times with flattering light, especially early morning or late afternoon for outdoor sessions.',
+          },
+          {
+            question: 'How many photos will I receive?',
+            answer:
+              'The final number depends on the type of session and package. Before booking, we explain the expected delivery range so you know exactly what is included.',
+          },
+          {
+            question: 'Are the photos edited?',
+            answer:
+              'Yes. Selected images receive color correction, light balancing, cropping, and polished finishing. More detailed retouching can be added depending on the package.',
+          },
+          {
+            question: 'How long does delivery take?',
+            answer:
+              'Portrait and commercial sessions are usually delivered within 10 to 15 business days. Weddings and larger events may take longer depending on the number of images.',
+          },
+          {
+            question: 'Can I request a specific style?',
+            answer:
+              'Absolutely. You can share references, mood boards, colors, and ideas before the shoot so we can shape the session around the look you want.',
+          },
+          {
+            question: 'Do you photograph outside the studio?',
+            answer:
+              'Yes. We cover studio, outdoor, event venue, restaurant, business, home, and real estate locations. Travel or location fees may apply depending on distance.',
+          },
+          {
+            question: 'Do you offer product and business photography?',
+            answer:
+              'Yes. We photograph products, food, real estate, fashion, brand portraits, and corporate events with files prepared for web, social media, and marketing use.',
+          },
+          {
+            question: 'How do I reserve a date?',
+            answer:
+              'Contact us with your preferred date, location, and session type. Once availability is confirmed, we send package options and reserve the date after the deposit.',
+          },
+          {
+            question: 'Can I order prints or albums?',
+            answer:
+              'Yes. Digital galleries are included, and prints, albums, wall art, and custom formats can be arranged after the final gallery is delivered.',
+          },
+        ],
+      },
       footer: {
         description:
           'Refined photography for weddings, portraits, events, and commercial stories, crafted with calm direction and cinematic color.',
@@ -415,6 +474,7 @@ const resources = {
         about: 'Sobre',
         portfolio: 'Portfólio',
         services: 'Serviços',
+        faqs: 'Dúvidas',
         packages: 'Pacotes',
         contact: 'Contato',
         book: 'Agendar ensaio',
@@ -735,6 +795,64 @@ const resources = {
               'As fotos do imóvel ficaram claras e espaçosas. Elas nos ajudaram a apresentar o anúncio com muito mais confiança.',
           },
         },
+      },
+      faqs: {
+        eyebrow: 'Perguntas e respostas',
+        title: 'Tudo o que você pode querer saber antes de agendar.',
+        description:
+          'Aqui estão os detalhes que os clientes normalmente perguntam antes de planejar um casamento, retrato, evento ou sessão comercial.',
+        items: [
+          {
+            question: 'Com quanta antecedência devo agendar uma sessão?',
+            answer:
+              'Para casamentos e eventos grandes, o ideal é reservar com 2 a 4 meses de antecedência. Ensaios de retrato, família, produto, gastronomia e imóveis geralmente podem ser planejados com 1 a 3 semanas, dependendo da disponibilidade.',
+          },
+          {
+            question: 'Vocês ajudam na escolha do local e horário?',
+            answer:
+              'Sim. Recomendamos locais que combinem com o clima do ensaio e sugerimos horários com luz mais bonita, especialmente início da manhã ou fim da tarde para sessões externas.',
+          },
+          {
+            question: 'Quantas fotos vou receber?',
+            answer:
+              'A quantidade final depende do tipo de sessão e do pacote. Antes da reserva, explicamos a faixa de entrega prevista para que você saiba exatamente o que está incluído.',
+          },
+          {
+            question: 'As fotos são editadas?',
+            answer:
+              'Sim. As imagens selecionadas recebem correção de cor, ajuste de luz, corte e acabamento profissional. Retoques mais detalhados podem ser adicionados conforme o pacote.',
+          },
+          {
+            question: 'Qual é o prazo de entrega?',
+            answer:
+              'Ensaios de retrato e sessões comerciais normalmente são entregues em 10 a 15 dias úteis. Casamentos e eventos maiores podem levar mais tempo, dependendo do volume de imagens.',
+          },
+          {
+            question: 'Posso pedir um estilo específico?',
+            answer:
+              'Com certeza. Você pode enviar referências, moodboards, cores e ideias antes da sessão para alinharmos o ensaio ao visual que deseja.',
+          },
+          {
+            question: 'Vocês fotografam fora do estúdio?',
+            answer:
+              'Sim. Atendemos em estúdio, áreas externas, locais de evento, restaurantes, empresas, casas e imóveis. Taxas de deslocamento podem ser aplicadas dependendo da distância.',
+          },
+          {
+            question: 'Vocês fazem fotografia de produto e negócios?',
+            answer:
+              'Sim. Fotografamos produtos, gastronomia, imóveis, moda, retratos de marca e eventos corporativos com arquivos preparados para site, redes sociais e marketing.',
+          },
+          {
+            question: 'Como faço para reservar uma data?',
+            answer:
+              'Entre em contato informando a data desejada, local e tipo de sessão. Após confirmarmos disponibilidade, enviamos as opções de pacote e reservamos a data com o pagamento do sinal.',
+          },
+          {
+            question: 'Posso pedir impressões ou álbuns?',
+            answer:
+              'Sim. As galerias digitais estão incluídas, e impressões, álbuns, quadros e formatos personalizados podem ser organizados após a entrega da galeria final.',
+          },
+        ],
       },
       footer: {
         description:

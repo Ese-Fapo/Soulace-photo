@@ -82,6 +82,7 @@ export const navLinks = [
     { id: 'About', href: '#about' },
     { id: 'Portfolio', href: '#portfolio' },
      { id: 'Services', href: '#services' },
+    { id: 'FAQs', href: '#faqs' },
     { id: 'Contact', href: '#contact' },
 ]
 
@@ -134,13 +135,13 @@ export const socialLinks = [
         id: 1,
         icon: FaInstagram,
         label: "Instagram",
-        href: "https://instagram.com/"
+        href: "https://www.instagram.com/soulaceimagery/"
     },
     {
         id: 2,
         icon: FaFacebookF,
         label: "Facebook",
-        href: "https://facebook.com/"
+        href: "https://www.facebook.com/soulace.soulace.9"
     },
     {
         id: 3,
@@ -163,6 +164,7 @@ export const quickLinks = [
     { id: 2, label: "Sobre", href: "#about" },
     { id: 3, label: "Portfólio", href: "#portfolio" },
     { id: 4, label: "Serviços", href: "#services" },
+    { id: 5, label: "Perguntas frequentes", href: "#faqs" },
     { id: 6, label: "Contato", href: "#contact" },
 ];
 

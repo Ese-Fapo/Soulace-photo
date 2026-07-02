@@ -11,6 +11,7 @@ import Portfolio from './components/Portfolio'
 import FloatingWhatsApp from './components/whataspp'
 import Testimonials from './components/Testimonials'
 import Gallery from './components/Gallery'
+import Faqs from './components/Faqs'
 
 const App = () => {
   const [route, setRoute] = useState(window.location.hash)
@@ -76,6 +77,8 @@ const App = () => {
       
       <Services />
       <Testimonials />
+      <Faqs />
+      
       <Contact />
       <Footer />
       <FloatingWhatsApp />
